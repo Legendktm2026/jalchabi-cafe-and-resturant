@@ -1,0 +1,112 @@
+@import "tailwindcss";
+@import "lenis/dist/lenis.css";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    /* Warm walnut, amber, and forest color palette */
+    --color-bg-dark: #120d09;
+    --color-bg-surface: #1c1510;
+    --color-bg-elevated: #281e17;
+    --color-amber-gold: #c58b4b;
+    --color-amber-light: #e6be8a;
+    --color-forest: #1e2e26;
+    --color-forest-deep: #131e19;
+    --color-cream: #f5efe6;
+    --color-cream-muted: #c9bea9;
+  }
+
+  html {
+    scroll-behavior: initial; /* Lenis handles 120Hz smooth inertia */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-dark);
+    color: var(--color-cream);
+    overflow-x: hidden;
+    overscroll-behavior-y: none; /* Prevents white rubber-banding on macOS trackpad */
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #120d09;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3e2e22;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c58b4b;
+}
+
+/* Glassmorphic and subtle grain utilities */
+.glass-panel {
+  background: rgba(28, 21, 16, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 139, 75, 0.18);
+}
+
+.glass-panel-elevated {
+  background: rgba(38, 28, 21, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(230, 190, 138, 0.28);
+}
+
+/* Atmospheric glow effects */
+.amber-glow {
+  box-shadow: 0 0 35px -5px rgba(197, 139, 75, 0.35);
+}
+
+.amber-glow-subtle {
+  box-shadow: 0 0 20px -3px rgba(197, 139, 75, 0.18);
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Apple ProMotion 120Hz GPU Compositing & Hardware Acceleration */
+.apple-gpu {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+.apple-ease {
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Apple-style subtle interactive hover lift */
+.apple-card-hover {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  will-change: transform;
+}
+
+.apple-card-hover:hover {
+  transform: translate3d(0, -4px, 0);
+}
+
