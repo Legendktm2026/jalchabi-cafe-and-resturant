@@ -221,12 +221,14 @@ export const ReservationSection: React.FC<ReservationSectionProps> = ({ onSucces
               <label className="block text-xs uppercase tracking-wider text-[#c9bea9] mb-2 font-medium">
                 Seating Atmosphere Preference
               </label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {[
-                  { id: 'cozy-booth', label: 'Walnut Banquette Booth', icon: <Armchair className="w-4 h-4" /> },
-                  { id: 'espresso-bar', label: 'Specialty Brew Bar', icon: <Sparkles className="w-4 h-4" /> },
-                  { id: 'main-dining', label: 'Main Dining Hall', icon: <Users className="w-4 h-4" /> },
-                  { id: 'terrace-veranda', label: 'Veranda & Terrace', icon: <Calendar className="w-4 h-4" /> },
+                  { id: 'lakeside-edge', label: '4+4 Lakeside Edge Tables', icon: <Sparkles className="w-4 h-4" /> },
+                  { id: 'lawn-tent', label: 'Lawn Cabana Tent (1 of 5)', icon: <Users className="w-4 h-4" /> },
+                  { id: 'restaurant-se', label: 'Restaurant & SE Room', icon: <Armchair className="w-4 h-4" /> },
+                  { id: 'rooftop-deck', label: 'Rooftop Stargazing Deck', icon: <Calendar className="w-4 h-4" /> },
+                  { id: 'lakeside-tent', label: 'Lakeside Cabana Tent', icon: <Sparkles className="w-4 h-4" /> },
+                  { id: 'espresso-bar', label: 'Hearth & Specialty Brew Bar', icon: <Clock className="w-4 h-4" /> },
                 ].map((seat) => (
                   <button
                     key={seat.id}

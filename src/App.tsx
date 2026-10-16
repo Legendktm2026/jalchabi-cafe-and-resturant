@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { CameraViewPreset, SceneMode, HotspotInfo, QualitySettings } from './types';
 import { Suspense, lazy } from 'react';
 const CafeScene = lazy(() =>
@@ -25,6 +25,25 @@ export const App: React.FC = () => {
   const [activeHotspot, setActiveHotspot] = useState<HotspotInfo | null>(null);
   const [isAccessibilityOpen, setIsAccessibilityOpen] = useState(false);
   const [webGLSupported] = useState<boolean>(() => isWebGLAvailable());
+
+  // Reference for off-screen viewport intersection to suspend WebGL rendering
+  const experienceRef = useRef<HTMLElement | null>(null);
+  const [isCanvasVisible, setIsCanvasVisible] = useState(true);
+
+  useEffect(() => {
+    const el = experienceRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsCanvasVisible(entry.isIntersecting);
+      },
+      { root: null, rootMargin: '60px', threshold: 0 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const [qualitySettings, setQualitySettings] = useState<QualitySettings>(() => {
     // Check for prefers-reduced-motion media query
@@ -125,6 +144,7 @@ export const App: React.FC = () => {
 
       {/* Main 3D Experience Viewport */}
       <section
+        ref={experienceRef}
         id="experience"
         className="relative w-full h-[780px] md:h-[900px] lg:h-[calc(100vh-4.5rem)] min-h-[640px] overflow-hidden bg-[#100b08] apple-gpu"
         style={{
@@ -153,6 +173,7 @@ export const App: React.FC = () => {
                 onSelectHotspot={handleSelectHotspot}
                 activeHotspotId={activeHotspot?.id}
                 qualitySettings={qualitySettings}
+                isVisible={isCanvasVisible}
               />
             </Suspense>
 

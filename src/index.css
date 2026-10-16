@@ -18,8 +18,9 @@
     --color-cream-muted: #c9bea9;
   }
 
+  html.lenis,
   html {
-    scroll-behavior: initial; /* Lenis handles 120Hz smooth inertia */
+    scroll-behavior: auto !important; /* Prevents conflict with Lenis 120Hz rAF momentum engine */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;

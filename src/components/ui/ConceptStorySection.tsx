@@ -55,65 +55,85 @@ export const ConceptStorySection: React.FC = () => {
           {/* Right Column: Editorial Copy */}
           <AppleScrollReveal delayMs={200} className="lg:col-span-6 space-y-6 text-[#c9bea9] text-base leading-relaxed">
             <h3 className="text-2xl sm:text-3xl font-serif text-[#f5efe6] font-normal">
-              A Contemporary Sanctuary in the City of Joy
+              A Lakeside Sanctuary in the Heart of Bengal
             </h3>
             <p>
-              In Bengali, <span className="text-[#e6be8a] font-serif italic">Jalchobi</span> refers to delicate watercolor paintings or fleeting silhouettes that ripple across moving water. For generations, Kolkata has been defined by its unhurried intellectual culture — an enduring appreciation for quiet literature, spirited conversation (<span className="italic">adda</span>), and artisanal craftsmanship.
+              In Bengali, <span className="text-[#e6be8a] font-serif italic">Jalchobi</span> (জলছবি) signifies the mesmerizing watercolor reflections and fleeting silhouettes that shimmer upon moving water. For generations, Kolkata has celebrated unhurried cultural contemplation — quiet literature, spirited conversation (<span className="italic">adda</span>), and reverence for nature.
             </p>
             <p>
-              Jalchobi was conceived as an ode to this cultural soul. We sought to design an architectural haven where the relentless tempo of urban life softly yields to amber lighting, warm walnut timber, and the rhythmic hiss of extracting espresso.
+              In its physical essence, Jalchobi unfolds around an intimate, tranquil lake. On both water’s edges rests a <span className="text-[#f5efe6] font-medium">4+4 waterside seating arrangement</span>, where guests sip pour-overs while watching ripples catch the golden dusk.
             </p>
             <p>
-              Every material inside our 3D space reflects intention: reclaimed dark timber beams from historic Bengal river barges, custom hammered brass accents, and fluted deep green acoustic paneling designed so that intimate whispers remain sacred.
+              To the left sits our full-service <span className="text-[#f5efe6] font-medium">Heritage Restaurant</span> and an enclosed, private <span className="text-[#f5efe6] font-medium">SE Room</span> for intimate salon gatherings. To the right lies an expansive, pristine green lawn hosting <span className="text-[#f5efe6] font-medium">five beautiful private dining tents</span>, complemented by waterside cabanas and an open-air <span className="text-[#f5efe6] font-medium">rooftop experience</span> overlooking the entire starlit sanctuary.
             </p>
 
-            <div className="pt-4 grid grid-cols-2 gap-4 border-t border-[#c58b4b]/20">
+            <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-[#c58b4b]/20">
               <div>
-                <span className="block text-2xl font-serif text-[#e6be8a]">100%</span>
-                <span className="text-xs uppercase tracking-wider text-[#c9bea9]">Direct-Trade Indian Estates</span>
+                <span className="block text-2xl font-serif text-[#e6be8a]">4 + 4</span>
+                <span className="text-[11px] uppercase tracking-wider text-[#c9bea9]">Lakeside Edges</span>
               </div>
               <div>
-                <span className="block text-2xl font-serif text-[#e6be8a]">32+ Seats</span>
-                <span className="text-xs uppercase tracking-wider text-[#c9bea9]">Acoustic Banquette Alcoves</span>
+                <span className="block text-2xl font-serif text-[#e6be8a]">5 Tents</span>
+                <span className="text-[11px] uppercase tracking-wider text-[#c9bea9]">Lawn Cabanas</span>
+              </div>
+              <div>
+                <span className="block text-2xl font-serif text-[#e6be8a]">SE Room</span>
+                <span className="text-[11px] uppercase tracking-wider text-[#c9bea9]">Private Dining</span>
+              </div>
+              <div>
+                <span className="block text-2xl font-serif text-[#e6be8a]">Rooftop</span>
+                <span className="text-[11px] uppercase tracking-wider text-[#c9bea9]">Stargazing Deck</span>
               </div>
             </div>
           </AppleScrollReveal>
         </div>
 
-        {/* Three Core Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Real Cafe Four Architectural Havens */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <AppleScrollReveal delayMs={100}>
-            <div className="p-8 rounded-2xl glass-panel border border-[#c58b4b]/20 hover:border-[#c58b4b]/50 apple-card-hover group h-full">
-              <div className="w-12 h-12 rounded-full bg-[#c58b4b]/15 flex items-center justify-center text-[#c58b4b] mb-6 group-hover:scale-110 transition-transform">
+            <div className="p-7 rounded-2xl glass-panel border border-[#c58b4b]/20 hover:border-[#c58b4b]/50 apple-card-hover group h-full">
+              <div className="w-11 h-11 rounded-full bg-[#c58b4b]/15 flex items-center justify-center text-[#c58b4b] mb-5 group-hover:scale-110 transition-transform">
                 <Sparkles className="w-5 h-5" />
               </div>
-              <h4 className="text-xl font-serif text-[#f5efe6] mb-3">Artisanal Extraction</h4>
-              <p className="text-sm text-[#c9bea9] leading-relaxed">
-                Curated single-origin coffees sourced from high-altitude estates in Araku Valley, Chikmagalur, and the Nilgiris, extracted via custom dual-group brass machinery and Kalita drippers.
+              <h4 className="text-lg font-serif text-[#f5efe6] mb-2">The 4+4 Lakeside Edge</h4>
+              <p className="text-xs text-[#c9bea9] leading-relaxed">
+                Positioned directly on both banks of the serene lake. Four intimate tables per side offer front-row water reflections, ripples, and cool twilight breezes.
+              </p>
+            </div>
+          </AppleScrollReveal>
+
+          <AppleScrollReveal delayMs={150}>
+            <div className="p-7 rounded-2xl glass-panel border border-[#c58b4b]/20 hover:border-[#c58b4b]/50 apple-card-hover group h-full">
+              <div className="w-11 h-11 rounded-full bg-[#c58b4b]/15 flex items-center justify-center text-[#c58b4b] mb-5 group-hover:scale-110 transition-transform">
+                <Compass className="w-5 h-5" />
+              </div>
+              <h4 className="text-lg font-serif text-[#f5efe6] mb-2">Clean Lawn &amp; 5 Tents</h4>
+              <p className="text-xs text-[#c9bea9] leading-relaxed">
+                The open right-wing meadow features five bespoke luxury dining tents designed for diverse audiences — families, friend reunions, and romantic rendezvous.
               </p>
             </div>
           </AppleScrollReveal>
 
           <AppleScrollReveal delayMs={200}>
-            <div className="p-8 rounded-2xl glass-panel border border-[#c58b4b]/20 hover:border-[#c58b4b]/50 apple-card-hover group h-full">
-              <div className="w-12 h-12 rounded-full bg-[#c58b4b]/15 flex items-center justify-center text-[#c58b4b] mb-6 group-hover:scale-110 transition-transform">
+            <div className="p-7 rounded-2xl glass-panel border border-[#c58b4b]/20 hover:border-[#c58b4b]/50 apple-card-hover group h-full">
+              <div className="w-11 h-11 rounded-full bg-[#c58b4b]/15 flex items-center justify-center text-[#c58b4b] mb-5 group-hover:scale-110 transition-transform">
                 <Feather className="w-5 h-5" />
               </div>
-              <h4 className="text-xl font-serif text-[#f5efe6] mb-3">Hearthside Baking</h4>
-              <p className="text-sm text-[#c9bea9] leading-relaxed">
-                Wild mushroom sourdough tartines, flaky saffron brioche, and bronte pistachio mille-feuille baked fresh every dawn in our hearth stone oven.
+              <h4 className="text-lg font-serif text-[#f5efe6] mb-2">Restaurant &amp; SE Room</h4>
+              <p className="text-xs text-[#c9bea9] leading-relaxed">
+                The left wing anchors the artisanal culinary hearth and an exclusive Special Enclosed (SE Room) suite for private celebrations and executive banquets.
               </p>
             </div>
           </AppleScrollReveal>
 
-          <AppleScrollReveal delayMs={300}>
-            <div className="p-8 rounded-2xl glass-panel border border-[#c58b4b]/20 hover:border-[#c58b4b]/50 apple-card-hover group h-full">
-              <div className="w-12 h-12 rounded-full bg-[#c58b4b]/15 flex items-center justify-center text-[#c58b4b] mb-6 group-hover:scale-110 transition-transform">
-                <Compass className="w-5 h-5" />
+          <AppleScrollReveal delayMs={250}>
+            <div className="p-7 rounded-2xl glass-panel border border-[#c58b4b]/20 hover:border-[#c58b4b]/50 apple-card-hover group h-full">
+              <div className="w-11 h-11 rounded-full bg-[#c58b4b]/15 flex items-center justify-center text-[#c58b4b] mb-5 group-hover:scale-110 transition-transform">
+                <Sparkles className="w-5 h-5" />
               </div>
-              <h4 className="text-xl font-serif text-[#f5efe6] mb-3">Sanctuary of Time</h4>
-              <p className="text-sm text-[#c9bea9] leading-relaxed">
-                A deliberate hospitality ethos. Whether lingering alone with an essay at twilight or sharing seasonal plates with friends, you are never rushed.
+              <h4 className="text-lg font-serif text-[#f5efe6] mb-2">Rooftop Experience</h4>
+              <p className="text-xs text-[#c9bea9] leading-relaxed">
+                An elevated open-air rooftop deck commanding unobstructed panoramic vistas across the lake, illuminated lawn tents, and Kolkata’s evening sky.
               </p>
             </div>
           </AppleScrollReveal>

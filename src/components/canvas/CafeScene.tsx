@@ -17,6 +17,7 @@ interface CafeSceneProps {
   onSelectHotspot: (hotspot: HotspotInfo) => void;
   activeHotspotId?: string;
   qualitySettings: QualitySettings;
+  isVisible?: boolean;
 }
 
 export const CafeScene: React.FC<CafeSceneProps> = ({
@@ -26,6 +27,7 @@ export const CafeScene: React.FC<CafeSceneProps> = ({
   onSelectHotspot,
   activeHotspotId,
   qualitySettings,
+  isVisible = true,
 }) => {
   const [doorOpenProgress, setDoorOpenProgress] = useState(0);
 
@@ -41,8 +43,9 @@ export const CafeScene: React.FC<CafeSceneProps> = ({
   return (
     <div className="relative w-full h-full bg-[#120d09]">
       <Canvas
+        frameloop={isVisible ? 'always' : 'never'}
         shadows={qualitySettings.shadows}
-        dpr={[1, Math.min(2, qualitySettings.pixelRatio)]}
+        dpr={[1, Math.min(1.75, qualitySettings.pixelRatio)]}
         camera={{ position: [0, 1.8, 8.5], fov: 46 }}
         gl={{
           antialias: true,

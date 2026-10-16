@@ -410,18 +410,167 @@ export const ExteriorEntrance: React.FC<ExteriorEntranceProps> = ({ doorOpenProg
         </mesh>
       </group>
 
-      {/* Exterior Street Pavement (outside entrance, z > 0 with subtle rain sheen) */}
-      <mesh position={[0, 0, 5.5]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-        <planeGeometry args={[20, 11]} />
-        <meshStandardMaterial
-          color="#161210"
-          roughness={0.3}
-          metalness={0.2}
+      {/* Central Stone Walkway (between the lake edges) */}
+      <mesh position={[0, 0.02, 5.5]} receiveShadow>
+        <boxGeometry args={[4.4, 0.04, 11]} />
+        <meshStandardMaterial color="#1a1411" roughness={0.7} />
+      </mesh>
+      {/* Stone Curbs along Walkway */}
+      <mesh position={[-2.25, 0.06, 5.5]} receiveShadow>
+        <boxGeometry args={[0.16, 0.08, 11]} />
+        <meshStandardMaterial color="#2d221a" roughness={0.8} />
+      </mesh>
+      <mesh position={[2.25, 0.06, 5.5]} receiveShadow>
+        <boxGeometry args={[0.16, 0.08, 11]} />
+        <meshStandardMaterial color="#2d221a" roughness={0.8} />
+      </mesh>
+
+      {/* =========================================================================
+          THE JALCHOBI LAKE & WATER REFLECTION SURFACE (Flanking the walkway)
+          ========================================================================= */}
+      {/* Left Lake Bank */}
+      <mesh position={[-6.0, -0.01, 5.5]} receiveShadow>
+        <boxGeometry args={[7.2, 0.02, 11]} />
+        <meshPhysicalMaterial
+          color="#0d1b17"
+          roughness={0.08}
+          metalness={0.9}
+          transmission={0.3}
+          reflectivity={0.9}
+          clearcoat={1.0}
+          clearcoatRoughness={0.1}
+        />
+      </mesh>
+      {/* Right Lake Bank */}
+      <mesh position={[6.0, -0.01, 5.5]} receiveShadow>
+        <boxGeometry args={[7.2, 0.02, 11]} />
+        <meshPhysicalMaterial
+          color="#0d1b17"
+          roughness={0.08}
+          metalness={0.9}
+          transmission={0.3}
+          reflectivity={0.9}
+          clearcoat={1.0}
+          clearcoatRoughness={0.1}
         />
       </mesh>
 
+      {/* =========================================================================
+          4 + 4 INTIMATE WATERSIDE EDGE TABLES (Both sides of the lake)
+          ========================================================================= */}
+      {/* Left 4 Waterside Edge Tables along the bank */}
+      {[-1.0, 1.5, 4.0, 6.5].map((zPos, idx) => (
+        <group key={`left-edge-table-${idx}`} position={[-3.0, 0.04, zPos]}>
+          {/* Table top */}
+          <mesh position={[0, 0.72, 0]} castShadow>
+            <cylinderGeometry args={[0.42, 0.42, 0.04, 12]} />
+            <meshStandardMaterial color="#1f1610" roughness={0.6} />
+          </mesh>
+          {/* Table stem & base */}
+          <mesh position={[0, 0.36, 0]}>
+            <cylinderGeometry args={[0.04, 0.22, 0.72, 8]} />
+            <meshStandardMaterial color="#c58b4b" metalness={0.8} roughness={0.3} />
+          </mesh>
+          {/* Waterside Amber Candle Lamp */}
+          <mesh position={[0, 0.82, 0]}>
+            <cylinderGeometry args={[0.05, 0.05, 0.16, 8]} />
+            <meshStandardMaterial color="#ffeedd" emissive="#ffaa44" emissiveIntensity={1.5} />
+          </mesh>
+          {/* 2 Chairs */}
+          <mesh position={[-0.45, 0.4, 0]}>
+            <boxGeometry args={[0.32, 0.45, 0.32]} />
+            <meshStandardMaterial color="#1a251f" roughness={0.7} />
+          </mesh>
+          <mesh position={[0.45, 0.4, 0]}>
+            <boxGeometry args={[0.32, 0.45, 0.32]} />
+            <meshStandardMaterial color="#1a251f" roughness={0.7} />
+          </mesh>
+        </group>
+      ))}
+
+      {/* Right 4 Waterside Edge Tables along the bank */}
+      {[-1.0, 1.5, 4.0, 6.5].map((zPos, idx) => (
+        <group key={`right-edge-table-${idx}`} position={[3.0, 0.04, zPos]}>
+          {/* Table top */}
+          <mesh position={[0, 0.72, 0]} castShadow>
+            <cylinderGeometry args={[0.42, 0.42, 0.04, 12]} />
+            <meshStandardMaterial color="#1f1610" roughness={0.6} />
+          </mesh>
+          {/* Table stem & base */}
+          <mesh position={[0, 0.36, 0]}>
+            <cylinderGeometry args={[0.04, 0.22, 0.72, 8]} />
+            <meshStandardMaterial color="#c58b4b" metalness={0.8} roughness={0.3} />
+          </mesh>
+          {/* Waterside Amber Candle Lamp */}
+          <mesh position={[0, 0.82, 0]}>
+            <cylinderGeometry args={[0.05, 0.05, 0.16, 8]} />
+            <meshStandardMaterial color="#ffeedd" emissive="#ffaa44" emissiveIntensity={1.5} />
+          </mesh>
+          {/* 2 Chairs */}
+          <mesh position={[-0.45, 0.4, 0]}>
+            <boxGeometry args={[0.32, 0.45, 0.32]} />
+            <meshStandardMaterial color="#1a251f" roughness={0.7} />
+          </mesh>
+          <mesh position={[0.45, 0.4, 0]}>
+            <boxGeometry args={[0.32, 0.45, 0.32]} />
+            <meshStandardMaterial color="#1a251f" roughness={0.7} />
+          </mesh>
+        </group>
+      ))}
+
+      {/* =========================================================================
+          RIGHT LAWN GROUND WITH 5 BEAUTIFUL DINING TENTS (Cabanas)
+          ========================================================================= */}
+      <group position={[8.5, 0, 5.0]}>
+        {/* Clean Lawn Ground */}
+        <mesh position={[0, 0.01, 0]} receiveShadow>
+          <boxGeometry args={[7.0, 0.02, 11]} />
+          <meshStandardMaterial color="#14211a" roughness={0.9} />
+        </mesh>
+        {/* 5 Dining Tents spaced gracefully on the lawn */}
+        {[
+          { x: -1.2, z: -2.5, scale: 0.9 },
+          { x: 1.4, z: -1.5, scale: 1.0 },
+          { x: -1.0, z: 1.0, scale: 1.0 },
+          { x: 1.5, z: 2.2, scale: 0.95 },
+          { x: 0.0, z: 4.8, scale: 1.05 },
+        ].map((tent, idx) => (
+          <group key={`lawn-tent-${idx}`} position={[tent.x, 0, tent.z]} scale={tent.scale}>
+            {/* Pyramid Canvas Tent Roof */}
+            <mesh position={[0, 1.4, 0]} castShadow>
+              <coneGeometry args={[1.3, 1.5, 4]} />
+              <meshStandardMaterial
+                color="#e8dec8"
+                roughness={0.75}
+                emissive="#ffcc77"
+                emissiveIntensity={0.12}
+              />
+            </mesh>
+            {/* 4 Timber Corner Poles */}
+            <mesh position={[-0.7, 0.6, -0.7]}>
+              <cylinderGeometry args={[0.03, 0.03, 1.2, 6]} />
+              <meshStandardMaterial color="#221812" />
+            </mesh>
+            <mesh position={[0.7, 0.6, -0.7]}>
+              <cylinderGeometry args={[0.03, 0.03, 1.2, 6]} />
+              <meshStandardMaterial color="#221812" />
+            </mesh>
+            <mesh position={[-0.7, 0.6, 0.7]}>
+              <cylinderGeometry args={[0.03, 0.03, 1.2, 6]} />
+              <meshStandardMaterial color="#221812" />
+            </mesh>
+            <mesh position={[0.7, 0.6, 0.7]}>
+              <cylinderGeometry args={[0.03, 0.03, 1.2, 6]} />
+              <meshStandardMaterial color="#221812" />
+            </mesh>
+            {/* Warm Tent Interior Glow */}
+            <pointLight position={[0, 0.9, 0]} color="#ffa844" intensity={0.45} distance={2.5} decay={2} />
+          </group>
+        ))}
+      </group>
+
       {/* Street Gas Lantern on Sidewalk Curb (Right side) */}
-      <group position={[3.2, 0, 3.2]}>
+      <group position={[2.8, 0, 3.2]}>
         {/* Cast iron black post */}
         <mesh position={[0, 1.4, 0]} castShadow>
           <cylinderGeometry args={[0.04, 0.06, 2.8, 12]} />

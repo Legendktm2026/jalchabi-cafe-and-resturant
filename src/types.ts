@@ -31,7 +31,15 @@ export interface ReservationFormData {
   guests: number;
   date: string;
   time: string;
-  seatingArea: 'main-dining' | 'espresso-bar' | 'cozy-booth' | 'terrace-veranda';
+  seatingArea:
+    | 'lakeside-edge'
+    | 'lawn-tent'
+    | 'restaurant-se'
+    | 'rooftop-deck'
+    | 'lakeside-tent'
+    | 'espresso-bar'
+    | 'cozy-booth'
+    | 'main-dining';
   specialRequests: string;
   dietaryNotes: string;
 }

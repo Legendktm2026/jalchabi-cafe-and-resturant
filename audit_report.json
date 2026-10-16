@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-10-16T14:08:27.153Z",
+  "environment": {
+    "platform": "macOS (Darwin arm64 / M1 Pro target)",
+    "browser": "Google Chrome / Headless ANGLE WebGL",
+    "targetRefreshRate": "120Hz ProMotion"
+  },
+  "network": {
+    "failedRequests": [],
+    "totalRequests": 22
+  },
+  "console": {
+    "errors": [],
+    "warnings": [],
+    "logs": []
+  },
+  "measurements": {
+    "sceneMetrics": {
+      "canvasWidth": 2160,
+      "canvasHeight": 1242,
+      "dpr": 2,
+      "renderer": "WebKit WebGL",
+      "vendor": "WebKit",
+      "maxTextureSize": 16384,
+      "maxViewportDims": [
+        16384,
+        16384
+      ]
+    },
+    "entrancePerformance": {
+      "sampleCount": 19,
+      "avgDeltaMs": 136.84,
+      "avgFPS": 7.3,
+      "minDeltaMs": 16.5,
+      "maxDeltaMs": 416.7,
+      "jankFrames": 14,
+      "jankPercentage": 73.7
+    },
+    "scrollPerformance": {
+      "sampleCount": 61,
+      "avgDeltaMs": 41.8,
+      "avgFPS": 23.9,
+      "maxDeltaMs": 350,
+      "jankFrames": 9,
+      "jankPercentage": 14.8
+    },
+    "offscreenCheck": {
+      "canvasRect": {
+        "top": -2117.8798828125,
+        "bottom": -1352.610107421875,
+        "height": 765.269775390625
+      },
+      "isOffscreen": true,
+      "windowScrollY": 2216
+    },
+    "lenisAudit": {
+      "hasLenisClass": true,
+      "htmlScrollBehavior": "auto",
+      "bodyOverscroll": "none"
+    }
+  },
+  "auditResults": {}
+}
