@@ -161,7 +161,7 @@ export const ReservationSection: React.FC<ReservationSectionProps> = React.memo(
                       `⏰ Time: ${formData.time}\n` +
                       `🪑 Seating: ${formData.seatingArea}\n` +
                       `${formData.specialRequests ? `📝 Notes: ${formData.specialRequests}\n` : ''}\n` +
-                      `Please confirm table availability with Sabir Hossain Khan. Thank you!`
+                      `Please confirm table availability with Sabir Hossen Khan. Thank you!`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -200,7 +200,7 @@ export const ReservationSection: React.FC<ReservationSectionProps> = React.memo(
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="e.g. Sabir Hossain Khan"
+                      placeholder="e.g. Sabir Hossen Khan"
                       className="w-full px-4 py-3 rounded-xl bg-[#0e1b17] border border-[#dfb86c]/25 text-[#fdfbf7] placeholder-[#8fa69d]/40 focus:outline-none focus:border-[#dfb86c] transition-colors text-sm"
                     />
                   </div>

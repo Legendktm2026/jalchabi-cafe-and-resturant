@@ -175,7 +175,7 @@ export const AppContent: React.FC = () => {
       {/* Concept Architectural Story */}
       <ConceptStorySection />
 
-      {/* Founder Sabir Hossain Khan's Story & Leadership Recognition */}
+      {/* Founder Sabir Hossen Khan's Story & Leadership Recognition */}
       <FounderStorySection />
 
       {/* Why Jalchabi is Canning II's #1 Sanctuary vs Local Competitors */}
@@ -214,7 +214,7 @@ export const AppContent: React.FC = () => {
         selectedSeatingId={selectedTableId}
       />
 
-      {/* Footer with Sabir Hossain Khan & Rizwan Khan Credits */}
+      {/* Footer with Sabir Hossen Khan & Rizwan Khan Credits */}
       <Footer onOpenAccessibility={() => setIsAccessibilityOpen(true)} />
 
       {/* Real-time Order Cart Floating Button & Drawers */}

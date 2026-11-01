@@ -221,7 +221,7 @@ export const FounderStorySection: React.FC = React.memo(() => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {/* Sabir Hossain Khan */}
+              {/* Sabir Hossen Khan */}
               <div className="p-6 rounded-2xl bg-[#14241f] border border-[#dfb86c]/30 flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl bg-[#dfb86c]/20 border border-[#dfb86c] flex items-center justify-center shrink-0 text-[#dfb86c]">
                   <Award className="w-6 h-6" />

@@ -2,7 +2,7 @@
  * Jalchabi Cafe & Restaurant — Centralized Business & Concept Configuration
  * 
  * Location: Sarberia, Atharobanki, Canning II, South 24 Parganas, West Bengal - 743329
- * Founder & CEO: Sabir Hossain Khan
+ * Founder & CEO: Sabir Hossen Khan
  * Website Architect & Developer: Rizwan Khan
  * Official Phone: +91 8918948730
  * UPI VPA: 8918948730@upi
@@ -144,8 +144,8 @@ export const RESTAURANT_DATA: RestaurantConfig = {
     cityContext: "Canning II, South 24 Parganas, West Bengal",
     exactLocation: "Sarberia, Atharobanki, Canning II, South 24 Parganas - 743329",
     bengaliExactLocation: "সারবেড়িয়া, আঠারোবাঁকি, ক্যানিং ২, দক্ষিণ ২৪ পরগনা - ৭৪৩৩২৯",
-    storyHeadline: "Built with passion and perseverance on ancestral soil by founder Sabir Hossain Khan, bringing world-class cafe ambience, piping hot momos, and hospitality to Canning II.",
-    founder: "Sabir Hossain Khan",
+    storyHeadline: "Built with passion and perseverance on ancestral soil by founder Sabir Hossen Khan, bringing world-class cafe ambience, piping hot momos, and hospitality to Canning II.",
+    founder: "Sabir Hossen Khan",
     founderRole: "Founder & CEO",
     developer: "Rizwan Khan",
     developerRole: "Website Architect & Lead Developer",
@@ -163,7 +163,7 @@ export const RESTAURANT_DATA: RestaurantConfig = {
     phoneHref: "tel:+918918948730",
     whatsappHref: "https://wa.me/918918948730",
     upiVpa: "8918948730@upi",
-    upiPayeeName: "Sabir Hossain Khan (Jalchabi Cafe)",
+    upiPayeeName: "Sabir Hossen Khan (Jalchabi Cafe)",
     email: "contact@jalchabi.com",
     isDemoLocation: false,
     notice: "Visit us at our serene waterside cafe in Sarberia, Atharobanki, Canning II (PIN: 743329).",
@@ -2161,7 +2161,7 @@ export const RESTAURANT_DATA: RestaurantConfig = {
       bengaliLocation: "বারুইপুর / ক্যানিং",
       rating: 5,
       date: "October 2026",
-      comment: "A peaceful waterside retreat. Love the Darjeeling Makaibari tea and Gondhoraj cooler. Sabir Hossain Khan has built this with genuine love for the soil. Highly recommended to everyone.",
+      comment: "A peaceful waterside retreat. Love the Darjeeling Makaibari tea and Gondhoraj cooler. Sabir Hossen Khan has built this with genuine love for the soil. Highly recommended to everyone.",
       bengaliComment: "শান্ত মনোরম জলের ধারে সুন্দর অবসর। দার্জিলিংয়ের মাকাইবাড়ি চা আর গন্ধরাজ কুলার অসাধারণ। সাবির হোসেন খান মাটির টানে এই অনন্য প্রতিষ্ঠান গড়েছেন।",
       favoriteDish: "Gondhoraj Brew & Bhetki Fish Fry",
       verifiedVisit: true,

@@ -68,7 +68,7 @@ export const WhyJalchabiSection: React.FC = React.memo(() => {
           <p className="text-sm sm:text-base text-[#8fa69d] max-w-2xl mx-auto leading-relaxed">
             {isBn
               ? 'আমাদের লক্ষ্য কেবল খাবার পরিবেশন নয়—আমাদের গ্রামীণ এলাকার মানুষ যাতে কলকাতার শ্রেষ্ঠ ক্যাফের সমতুল্য আতিথেয়তা ও খাঁটি খাবারের স্বাদ পান, সেটাই সাবির হোসেন খানের আজীবনের অঙ্গীকার।'
-              : 'Our mission transcends ordinary fast food. Founder Sabir Hossain Khan built Jalchabi so rural Canning can relish world-class hospitality, purity of ingredients, and tranquil dining right at home.'}
+              : 'Our mission transcends ordinary fast food. Founder Sabir Hossen Khan built Jalchabi so rural Canning can relish world-class hospitality, purity of ingredients, and tranquil dining right at home.'}
           </p>
         </AppleScrollReveal>
 
@@ -130,7 +130,7 @@ export const WhyJalchabiSection: React.FC = React.memo(() => {
                   {isBn ? 'সরাসরি মালিকের আন্তরিক প্রতিশ্রুতি' : 'Direct Founder Hospitality'}
                 </span>
                 <h3 className="text-xl sm:text-2xl font-serif text-[#fdfbf7] font-light mt-0.5">
-                  {isBn ? 'যেকোনো বিষয়ে কথা বলুন সাবির হোসেন খানের সাথে' : 'Speak Directly with Sabir Hossain Khan'}
+                  {isBn ? 'যেকোনো বিষয়ে কথা বলুন সাবির হোসেন খানের সাথে' : 'Speak Directly with Sabir Hossen Khan'}
                 </h3>
                 <p className="text-xs text-[#8fa69d] mt-1">
                   {isBn

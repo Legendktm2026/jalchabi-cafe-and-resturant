@@ -181,7 +181,7 @@ export const FounderStoryModal: React.FC<FounderStoryModalProps> = ({ onClose })
               {f.leadershipTitle}
             </h3>
             <div className="space-y-3">
-              {/* Sabir Hossain Khan */}
+              {/* Sabir Hossen Khan */}
               <div className="p-4 rounded-2xl bg-[#0e1b17] border border-[#dfb86c]/30 flex items-start gap-3">
                 <div className="w-10 h-10 rounded-xl bg-[#dfb86c]/20 border border-[#dfb86c] flex items-center justify-center shrink-0">
                   <Award className="w-5 h-5 text-[#dfb86c]" />

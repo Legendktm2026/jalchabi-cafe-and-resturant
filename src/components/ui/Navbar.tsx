@@ -168,7 +168,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Direct Phone / WhatsApp Helpline */}
             <a
               href="tel:+918918948730"
-              title="Call Sabir Hossain Khan: +91 8918948730"
+              title="Call Sabir Hossen Khan: +91 8918948730"
               className="p-2 rounded-full border border-[#dfb86c]/20 hover:border-[#dfb86c] text-[#8fa69d] hover:text-[#e5c378] transition-colors"
             >
               <Phone className="w-4 h-4" />
