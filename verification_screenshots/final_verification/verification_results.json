@@ -1,0 +1,185 @@
+{
+  "viewports": [
+    {
+      "name": "320px_android_narrow",
+      "width": 320,
+      "height": 640,
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "bodyWidth": 320,
+      "hasOverflow": false
+    },
+    {
+      "name": "360px_android_standard",
+      "width": 360,
+      "height": 740,
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "bodyWidth": 360,
+      "hasOverflow": false
+    },
+    {
+      "name": "375px_iphone_se",
+      "width": 375,
+      "height": 667,
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "bodyWidth": 375,
+      "hasOverflow": false
+    },
+    {
+      "name": "390px_iphone_standard",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "bodyWidth": 390,
+      "hasOverflow": false
+    },
+    {
+      "name": "402px_android_pixel",
+      "width": 402,
+      "height": 874,
+      "scrollWidth": 402,
+      "innerWidth": 402,
+      "bodyWidth": 402,
+      "hasOverflow": false
+    },
+    {
+      "name": "412px_android_samsung",
+      "width": 412,
+      "height": 915,
+      "scrollWidth": 412,
+      "innerWidth": 412,
+      "bodyWidth": 412,
+      "hasOverflow": false
+    },
+    {
+      "name": "430px_iphone_17_pro_max",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "innerWidth": 430,
+      "bodyWidth": 430,
+      "hasOverflow": false
+    },
+    {
+      "name": "440px_android_large",
+      "width": 440,
+      "height": 956,
+      "scrollWidth": 440,
+      "innerWidth": 440,
+      "bodyWidth": 440,
+      "hasOverflow": false
+    },
+    {
+      "name": "768px_ipad_portrait",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "bodyWidth": 768,
+      "hasOverflow": false
+    },
+    {
+      "name": "820px_ipad_air",
+      "width": 820,
+      "height": 1180,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "bodyWidth": 820,
+      "hasOverflow": false
+    },
+    {
+      "name": "1024px_ipad_pro_landscape",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "innerWidth": 1024,
+      "bodyWidth": 1024,
+      "hasOverflow": false
+    },
+    {
+      "name": "1280px_macbook_compact",
+      "width": 1280,
+      "height": 800,
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "bodyWidth": 1280,
+      "hasOverflow": false
+    },
+    {
+      "name": "1440px_macbook_pro",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "bodyWidth": 1440,
+      "hasOverflow": false
+    },
+    {
+      "name": "1920px_desktop_fhd",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "bodyWidth": 1920,
+      "hasOverflow": false
+    }
+  ],
+  "occlusionChecks": {
+    "heroCTA": {
+      "found": true,
+      "enterBtnRect": {
+        "top": 806,
+        "bottom": 850,
+        "height": 44
+      },
+      "dockRect": {
+        "top": 846.5,
+        "height": 85.5
+      },
+      "clearanceAboveDock": -3.5,
+      "isOccludedByDock": false,
+      "topElementTag": "SPAN",
+      "isEnterBtnOrChild": true
+    },
+    "footerScrollTop": {
+      "found": true,
+      "scrollBtnRect": {
+        "top": 783.421875,
+        "bottom": 820.078125,
+        "height": 36.65625
+      },
+      "dockRect": {
+        "top": 846.5,
+        "height": 85.5
+      },
+      "clearanceAboveDock": 26.421875,
+      "isOccludedByDock": false,
+      "isScrollBtnOrChild": true
+    }
+  },
+  "drawerCheck": {
+    "isOpen": true,
+    "isBodyLocked": true,
+    "ariaModal": "true",
+    "isClosed": true,
+    "bodyUnlocked": true
+  },
+  "reservationCheck": {
+    "referenceCode": "JAL-CAN-8246",
+    "hasWhatsAppBtn": true,
+    "whatsAppHref": "https://wa.me/918918948730?text=Hello%20Jalchobi%20Cafe%20%26%20Restaurant%2C%20I%20have%20submitted%20a%20table%20reservation%20inquiry.%0A%0A%F0%9F%93%8B%20Reference%3A%20JAL-CAN-8246%0A%F0%9F%91%A4%20Name%3A%20Rizwan%20%26%20Guests%0A%F0%9F%91%A5%20Guests%3A%202%0A%F0%9F%93%85%20Date%3A%202026-10-23%0A%E2%8F%B0%20Time%3A%2019%3A30%0A%F0%9F%AA%91%20Seating%3A%20cozy-booth%0A%F0%9F%93%9D%20Notes%3A%20Window%20seat%20requested%20with%20evening%20sunset%20ambiance.%0A%0APlease%20confirm%20table%20availability%20with%20Sabir%20Hossain%20Khan.%20Thank%20you!"
+  },
+  "allPassed": true,
+  "graphicsSettingsCheck": {
+    "isOpen": true,
+    "tierCount": 3,
+    "tiersFound": [
+      "Low / Saver1x dpr",
+      "Balanced1.25x dpr",
+      "High / Pro1.5x dpr"
+    ]
+  }
+}

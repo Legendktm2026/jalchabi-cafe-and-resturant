@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#241913"/>
+      <stop offset="70%" stop-color="#150f0b"/>
+      <stop offset="100%" stop-color="#0d0805"/>
+    </radialGradient>
+    <!-- Gold Trim Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="50%" stop-color="#f5d77f"/>
+      <stop offset="100%" stop-color="#c58b4b"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Heritage Border Frame -->
+  <rect x="24" y="24" width="752" height="752" rx="28" fill="none" stroke="#c58b4b" stroke-width="2" stroke-opacity="0.35"/>
+  <rect x="34" y="34" width="732" height="732" rx="22" fill="none" stroke="#d4af37" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="8,6"/>
+
+  <!-- Top Category & Bengali Badge -->
+  <g transform="translate(400, 68)" text-anchor="middle">
+    <rect x="-160" y="-22" width="320" height="40" rx="20" fill="#1e140d" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <text x="0" y="4" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#e6be8a" letter-spacing="3">KOLKATA HERITAGE • JALCHABI</text>
+  </g>
+
+  <!-- Central Culinary Illustration with Drop Shadow -->
+  <g filter="url(#shadow)">
+    
+      <!-- Wooden Board Platter -->
+      <rect x="180" y="250" width="440" height="300" rx="24" fill="#2b1a11" stroke="#c58b4b" stroke-width="4"/>
+      <!-- Signature Paper Wrap -->
+      <polygon points="260,490 440,230 490,260 310,520" fill="#ffffff" stroke="#bdc3c7" stroke-width="2"/>
+      <polygon points="270,480 430,240 450,250 290,490" fill="#ecf0f1"/>
+      <!-- Flaky Golden Paratha Cylinder -->
+      <path d="M 290 440 L 460 200 C 490 180, 520 210, 490 240 L 320 480 Z" fill="#e59866" stroke="#b9770e" stroke-width="4"/>
+      <!-- Golden Egg Layer Edge -->
+      <path d="M 460 200 Q 480 190 500 215" stroke="#f1c40f" stroke-width="8" stroke-linecap="round"/>
+      <!-- Charred Spiced Chicken & Onions Bursting Out -->
+      <circle cx="485" cy="195" r="14" fill="#a04000"/>
+      <circle cx="505" cy="215" r="12" fill="#78281f"/>
+      <circle cx="475" cy="225" r="10" fill="#a04000"/>
+      <!-- Sliced Green Chili & Raw Onion Rings -->
+      <ellipse cx="495" cy="205" rx="14" ry="7" fill="none" stroke="#27ae60" stroke-width="3"/>
+      <ellipse cx="510" cy="230" rx="16" ry="8" fill="none" stroke="#fdfefe" stroke-width="3"/>
+      <!-- Tangy Lemon Slice at Base -->
+      <path d="M 230 450 A 30 30 0 0 1 280 480 Z" fill="#f4d03f" stroke="#d4ac0d" stroke-width="2"/>
+    
+  </g>
+
+  <!-- Bottom Dish Info Banner -->
+  <g transform="translate(400, 680)" text-anchor="middle">
+    <!-- Dish Title -->
+    <text x="0" y="0" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="600" fill="#f5efe6" letter-spacing="1">
+      Kolkata Double Egg Chicken Kathi Roll
+    </text>
+    <!-- Bengali Subtitle -->
+    <text x="0" y="32" font-family="'Noto Sans Bengali', system-ui, sans-serif" font-size="20" font-weight="500" fill="#e6be8a">
+      কলকাতা ডবল ডিম চিকেন কাঠি রোল
+    </text>
+    <!-- Provenance / Description Pills -->
+    <text x="0" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="400" fill="#c9bea9" letter-spacing="1">
+      Crisp Egg Paratha • Tandoori Chicken Chunks • Chaat Lime
+    </text>
+  </g>
+
+  <!-- Signature Badge -->
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="180" height="30" rx="15" fill="#2d1c10" stroke="#d4af37" stroke-width="1" opacity="0.9"/>
+    <text x="16" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#f5efe6">✨ Park Street Original Recipe</text>
+  </g>
+
+  <!-- Ready for Enhanced Pixabay / WebP Tag -->
+  <g transform="translate(560, 80)">
+    <rect x="0" y="0" width="160" height="30" rx="15" fill="#1b261e" stroke="#27ae60" stroke-width="1" opacity="0.9"/>
+    <text x="14" y="20" font-family="system-ui, monospace" font-size="11" font-weight="600" fill="#2ecc71">● 4K ENHANCED</text>
+  </g>
+</svg>

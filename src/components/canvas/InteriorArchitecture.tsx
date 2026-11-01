@@ -19,7 +19,7 @@ export const InteriorArchitecture: React.FC = () => {
       {/* Decorative Brass Inlay Strip separating entrance threshold from main parquet */}
       <mesh position={[0, 0.005, 3.2]}>
         <boxGeometry args={[10.5, 0.01, 0.04]} />
-        <meshStandardMaterial color="#c58b4b" metalness={0.9} roughness={0.2} />
+        <meshStandardMaterial color="#dfb86c" metalness={0.9} roughness={0.2} />
       </mesh>
 
       {/* =========================================================================
@@ -41,11 +41,11 @@ export const InteriorArchitecture: React.FC = () => {
           {/* Subtle Brass Bracket on each beam end */}
           <mesh position={[-5.5, -0.1, 0]}>
             <boxGeometry args={[0.08, 0.2, 0.3]} />
-            <meshStandardMaterial color="#c58b4b" metalness={0.8} roughness={0.3} />
+            <meshStandardMaterial color="#dfb86c" metalness={0.8} roughness={0.3} />
           </mesh>
           <mesh position={[5.5, -0.1, 0]}>
             <boxGeometry args={[0.08, 0.2, 0.3]} />
-            <meshStandardMaterial color="#c58b4b" metalness={0.8} roughness={0.3} />
+            <meshStandardMaterial color="#dfb86c" metalness={0.8} roughness={0.3} />
           </mesh>
         </group>
       ))}
@@ -81,14 +81,12 @@ export const InteriorArchitecture: React.FC = () => {
         {/* Window Glass Pane */}
         <mesh position={[0, 0, 0.02]}>
           <planeGeometry args={[4.6, 2.6]} />
-          <meshPhysicalMaterial
+          <meshStandardMaterial
             color="#cad9e8"
             transparent
-            opacity={0.32}
-            roughness={0.05}
-            transmission={0.88}
-            thickness={0.1}
-            reflectivity={0.7}
+            opacity={0.35}
+            roughness={0.1}
+            metalness={0.1}
           />
         </mesh>
 
@@ -128,7 +126,7 @@ export const InteriorArchitecture: React.FC = () => {
       {/* Fluted panel grooves simulation */}
       <mesh position={[-5.54, 1.4, -1.5]}>
         <boxGeometry args={[0.04, 0.06, 11.4]} />
-        <meshStandardMaterial color="#c58b4b" metalness={0.85} roughness={0.25} />
+        <meshStandardMaterial color="#dfb86c" metalness={0.85} roughness={0.25} />
       </mesh>
       {/* Upper Textured Plaster Wall (Deep charcoal warm plaster) */}
       <mesh position={[-5.65, 2.7, -1.5]} receiveShadow>
@@ -152,7 +150,7 @@ export const InteriorArchitecture: React.FC = () => {
       {/* Brass Chair Rail Trim */}
       <mesh position={[5.54, 1.4, -1.5]}>
         <boxGeometry args={[0.04, 0.06, 11.4]} />
-        <meshStandardMaterial color="#c58b4b" metalness={0.85} roughness={0.25} />
+        <meshStandardMaterial color="#dfb86c" metalness={0.85} roughness={0.25} />
       </mesh>
 
       {/* Vertical Acoustic Timber Slats on Right Wall */}
@@ -175,11 +173,11 @@ export const InteriorArchitecture: React.FC = () => {
         {/* Column Capital & Base Trim */}
         <mesh position={[0, 1.9, 0]}>
           <boxGeometry args={[0.52, 0.15, 0.52]} />
-          <meshStandardMaterial color="#c58b4b" metalness={0.8} roughness={0.3} />
+          <meshStandardMaterial color="#dfb86c" metalness={0.8} roughness={0.3} />
         </mesh>
         <mesh position={[0, -1.9, 0]}>
           <boxGeometry args={[0.52, 0.15, 0.52]} />
-          <meshStandardMaterial color="#c58b4b" metalness={0.8} roughness={0.3} />
+          <meshStandardMaterial color="#dfb86c" metalness={0.8} roughness={0.3} />
         </mesh>
       </group>
 
@@ -192,11 +190,11 @@ export const InteriorArchitecture: React.FC = () => {
         {/* Column Capital & Base Trim */}
         <mesh position={[0, 1.9, 0]}>
           <boxGeometry args={[0.52, 0.15, 0.52]} />
-          <meshStandardMaterial color="#c58b4b" metalness={0.8} roughness={0.3} />
+          <meshStandardMaterial color="#dfb86c" metalness={0.8} roughness={0.3} />
         </mesh>
         <mesh position={[0, -1.9, 0]}>
           <boxGeometry args={[0.52, 0.15, 0.52]} />
-          <meshStandardMaterial color="#c58b4b" metalness={0.8} roughness={0.3} />
+          <meshStandardMaterial color="#dfb86c" metalness={0.8} roughness={0.3} />
         </mesh>
       </group>
     </group>

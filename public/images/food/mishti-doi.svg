@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#241913"/>
+      <stop offset="70%" stop-color="#150f0b"/>
+      <stop offset="100%" stop-color="#0d0805"/>
+    </radialGradient>
+    <!-- Gold Trim Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="50%" stop-color="#f5d77f"/>
+      <stop offset="100%" stop-color="#c58b4b"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Heritage Border Frame -->
+  <rect x="24" y="24" width="752" height="752" rx="28" fill="none" stroke="#c58b4b" stroke-width="2" stroke-opacity="0.35"/>
+  <rect x="34" y="34" width="732" height="732" rx="22" fill="none" stroke="#d4af37" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="8,6"/>
+
+  <!-- Top Category & Bengali Badge -->
+  <g transform="translate(400, 68)" text-anchor="middle">
+    <rect x="-160" y="-22" width="320" height="40" rx="20" fill="#1e140d" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <text x="0" y="4" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#e6be8a" letter-spacing="3">KOLKATA HERITAGE • JALCHABI</text>
+  </g>
+
+  <!-- Central Culinary Illustration with Drop Shadow -->
+  <g filter="url(#shadow)">
+    
+      <!-- Platter Base -->
+      <ellipse cx="400" cy="490" rx="190" ry="60" fill="#1c120a" stroke="#c58b4b" stroke-width="4"/>
+      <!-- Terracotta Bhar (Earthen Pot) -->
+      <path d="M 300 310 L 320 460 C 340 480, 460 480, 480 460 L 500 310 Z" fill="#935116" stroke="#6e2c00" stroke-width="6"/>
+      <!-- Earthen Pot Top Rim -->
+      <ellipse cx="400" cy="310" rx="100" ry="25" fill="#a04000" stroke="#6e2c00" stroke-width="4"/>
+      <!-- Thick Creamy Caramelized Sweet Curd Layer -->
+      <ellipse cx="400" cy="312" rx="90" ry="20" fill="#f5cba7"/>
+      <ellipse cx="395" cy="314" rx="75" ry="15" fill="#f8c471" opacity="0.9"/>
+      <!-- Golden Nolen Gur Syrup Drizzle & Pistachio Garnish -->
+      <path d="M 360 310 Q 400 320 430 312" stroke="#7e5109" stroke-width="4" fill="none"/>
+      <circle cx="380" cy="312" r="3" fill="#27ae60"/>
+      <circle cx="410" cy="314" r="3" fill="#27ae60"/>
+      <circle cx="395" cy="310" r="2.5" fill="#e74c3c"/>
+      <!-- Earthen Pot Clay Grooves -->
+      <path d="M 325 380 Q 400 400 475 380" stroke="#78281f" stroke-width="3" fill="none"/>
+      <path d="M 335 420 Q 400 440 465 420" stroke="#78281f" stroke-width="3" fill="none"/>
+    
+  </g>
+
+  <!-- Bottom Dish Info Banner -->
+  <g transform="translate(400, 680)" text-anchor="middle">
+    <!-- Dish Title -->
+    <text x="0" y="0" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="600" fill="#f5efe6" letter-spacing="1">
+      Nolen Gur Mishti Doi
+    </text>
+    <!-- Bengali Subtitle -->
+    <text x="0" y="32" font-family="'Noto Sans Bengali', system-ui, sans-serif" font-size="20" font-weight="500" fill="#e6be8a">
+      খাঁটি নলেন গুড়ের মিষ্টি দই
+    </text>
+    <!-- Provenance / Description Pills -->
+    <text x="0" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="400" fill="#c9bea9" letter-spacing="1">
+      Caramelized Sweet Curd • Baked in Terracotta Bhar
+    </text>
+  </g>
+
+  <!-- Signature Badge -->
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="180" height="30" rx="15" fill="#2d1c10" stroke="#d4af37" stroke-width="1" opacity="0.9"/>
+    <text x="16" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#f5efe6">✨ Bengal Confectionery Pride</text>
+  </g>
+
+  <!-- Ready for Enhanced Pixabay / WebP Tag -->
+  <g transform="translate(560, 80)">
+    <rect x="0" y="0" width="160" height="30" rx="15" fill="#1b261e" stroke="#27ae60" stroke-width="1" opacity="0.9"/>
+    <text x="14" y="20" font-family="system-ui, monospace" font-size="11" font-weight="600" fill="#2ecc71">● 4K ENHANCED</text>
+  </g>
+</svg>

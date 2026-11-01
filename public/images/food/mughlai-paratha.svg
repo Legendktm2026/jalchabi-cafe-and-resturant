@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#241913"/>
+      <stop offset="70%" stop-color="#150f0b"/>
+      <stop offset="100%" stop-color="#0d0805"/>
+    </radialGradient>
+    <!-- Gold Trim Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="50%" stop-color="#f5d77f"/>
+      <stop offset="100%" stop-color="#c58b4b"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Heritage Border Frame -->
+  <rect x="24" y="24" width="752" height="752" rx="28" fill="none" stroke="#c58b4b" stroke-width="2" stroke-opacity="0.35"/>
+  <rect x="34" y="34" width="732" height="732" rx="22" fill="none" stroke="#d4af37" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="8,6"/>
+
+  <!-- Top Category & Bengali Badge -->
+  <g transform="translate(400, 68)" text-anchor="middle">
+    <rect x="-160" y="-22" width="320" height="40" rx="20" fill="#1e140d" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <text x="0" y="4" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#e6be8a" letter-spacing="3">KOLKATA HERITAGE • JALCHABI</text>
+  </g>
+
+  <!-- Central Culinary Illustration with Drop Shadow -->
+  <g filter="url(#shadow)">
+    
+      <!-- Ceramic Platter -->
+      <ellipse cx="400" cy="400" rx="230" ry="160" fill="#241812" stroke="#c58b4b" stroke-width="5"/>
+      <!-- Golden Fried Rectangular Paratha Envelope -->
+      <polygon points="250,330 430,280 480,410 300,460" fill="#d35400" stroke="#935116" stroke-width="4"/>
+      <polygon points="260,340 420,295 465,400 310,445" fill="#f39c12" opacity="0.9"/>
+      <!-- Sliced Cuts in the Paratha -->
+      <line x1="330" y1="310" x2="370" y2="435" stroke="#7e5109" stroke-width="4"/>
+      <line x1="390" y1="290" x2="430" y2="415" stroke="#7e5109" stroke-width="4"/>
+      <!-- Aloo Kosha Gravy Bowl on Side -->
+      <circle cx="510" cy="350" r="50" fill="#1b120c" stroke="#d4af37" stroke-width="3"/>
+      <circle cx="510" cy="350" r="42" fill="#78281f"/>
+      <!-- Baby Potato in Gravy -->
+      <circle cx="505" cy="345" r="18" fill="#d35400"/>
+      <!-- Cucumber & Onion Salad Rings -->
+      <circle cx="250" cy="430" r="20" fill="none" stroke="#2ecc71" stroke-width="4"/>
+      <circle cx="270" cy="450" r="16" fill="none" stroke="#fdfefe" stroke-width="3"/>
+    
+  </g>
+
+  <!-- Bottom Dish Info Banner -->
+  <g transform="translate(400, 680)" text-anchor="middle">
+    <!-- Dish Title -->
+    <text x="0" y="0" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="600" fill="#f5efe6" letter-spacing="1">
+      Royal Mughlai Paratha with Aloo Koshá
+    </text>
+    <!-- Bengali Subtitle -->
+    <text x="0" y="32" font-family="'Noto Sans Bengali', system-ui, sans-serif" font-size="20" font-weight="500" fill="#e6be8a">
+      শাহি মোঘলাই পরোটা ও কষা আলু
+    </text>
+    <!-- Provenance / Description Pills -->
+    <text x="0" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="400" fill="#c9bea9" letter-spacing="1">
+      Crisp Egg-Mince Filled Envelope • Spicy Dum Aloo
+    </text>
+  </g>
+
+  <!-- Signature Badge -->
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="180" height="30" rx="15" fill="#2d1c10" stroke="#d4af37" stroke-width="1" opacity="0.9"/>
+    <text x="16" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#f5efe6">✨ Historic Bengal Street Icon</text>
+  </g>
+
+  <!-- Ready for Enhanced Pixabay / WebP Tag -->
+  <g transform="translate(560, 80)">
+    <rect x="0" y="0" width="160" height="30" rx="15" fill="#1b261e" stroke="#27ae60" stroke-width="1" opacity="0.9"/>
+    <text x="14" y="20" font-family="system-ui, monospace" font-size="11" font-weight="600" fill="#2ecc71">● 4K ENHANCED</text>
+  </g>
+</svg>

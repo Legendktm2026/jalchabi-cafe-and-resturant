@@ -1,0 +1,35 @@
+{
+  "url": "http://localhost:4173",
+  "timestamp": "2026-10-17T05:57:25.130Z",
+  "desktop": {
+    "consoleErrors": [],
+    "checks": {
+      "dishCardsCount": 15,
+      "modalHas3DCanvas": false
+    }
+  },
+  "mobile": {
+    "consoleErrors": [],
+    "checks": {
+      "dockInfo": {
+        "visible": true,
+        "rect": {
+          "top": 770,
+          "bottom": 844,
+          "height": 74
+        },
+        "buttons": [
+          "কল করুন",
+          "মেনু",
+          "ম্যাপ",
+          "বুকিং",
+          "অর্ডার"
+        ]
+      },
+      "cardClipping": {
+        "cardRect": {},
+        "buttonClipped": false
+      }
+    }
+  }
+}

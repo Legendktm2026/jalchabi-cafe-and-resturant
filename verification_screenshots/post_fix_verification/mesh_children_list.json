@@ -1,0 +1,397 @@
+[
+  {
+    "idx": 0,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 8,
+      "height": 5,
+      "depth": 0.4,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#17241d",
+      "opacity": 1
+    }
+  },
+  {
+    "idx": 1,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 8,
+      "height": 5,
+      "depth": 0.4,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#17241d",
+      "opacity": 1
+    }
+  },
+  {
+    "idx": 2,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 3,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 4,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 5,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 4.4,
+      "height": 0.8,
+      "depth": 0.4,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#18130e",
+      "opacity": 1
+    }
+  },
+  {
+    "idx": 6,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 4.4,
+      "height": 1.2,
+      "depth": 0.4,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#141b16",
+      "opacity": 1
+    }
+  },
+  {
+    "idx": 7,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 0.5,
+      "height": 3,
+      "depth": 0.4,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#18130e",
+      "opacity": 1
+    }
+  },
+  {
+    "idx": 8,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 0.5,
+      "height": 3,
+      "depth": 0.4,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#18130e",
+      "opacity": 1
+    }
+  },
+  {
+    "idx": 9,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 3.5,
+      "height": 0.6,
+      "depth": 0.05,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#dbe4eb",
+      "opacity": 0.35
+    }
+  },
+  {
+    "idx": 10,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 4.8,
+      "height": 0.15,
+      "depth": 1.4,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#140f0c",
+      "opacity": 1
+    }
+  },
+  {
+    "idx": 11,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 4.82,
+      "height": 0.16,
+      "depth": 0.04,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#c58b4b",
+      "opacity": 1
+    }
+  },
+  {
+    "idx": 12,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 13,
+    "type": "PointLight",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 14,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 15,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 16,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 17,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 18,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 4.2,
+      "height": 0.06,
+      "depth": 0.6,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#28221d",
+      "opacity": 1
+    }
+  },
+  {
+    "idx": 19,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 20,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 4.4,
+      "height": 0.04,
+      "depth": 11,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#1a1411",
+      "opacity": 1
+    }
+  },
+  {
+    "idx": 21,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 0.16,
+      "height": 0.08,
+      "depth": 11,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#2d221a",
+      "opacity": 1
+    }
+  },
+  {
+    "idx": 22,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 0.16,
+      "height": 0.08,
+      "depth": 11,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#2d221a",
+      "opacity": 1
+    }
+  },
+  {
+    "idx": 23,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 7.2,
+      "height": 0.02,
+      "depth": 11,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#0d1b17",
+      "opacity": 1
+    }
+  },
+  {
+    "idx": 24,
+    "type": "Mesh",
+    "geo": "BoxGeometry",
+    "args": {
+      "width": 7.2,
+      "height": 0.02,
+      "depth": 11,
+      "widthSegments": 1,
+      "heightSegments": 1,
+      "depthSegments": 1
+    },
+    "mat": {
+      "color": "#0d1b17",
+      "opacity": 1
+    }
+  },
+  {
+    "idx": 25,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 26,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 27,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 28,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 29,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 30,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 31,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 32,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 33,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  },
+  {
+    "idx": 34,
+    "type": "Group",
+    "geo": "group",
+    "args": null,
+    "mat": null
+  }
+]

@@ -3,46 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231b120c'/><circle cx='50' cy='50' r='32' stroke='%23d4a373' stroke-width='4' fill='none'/><path d='M35 55 Q 50 35 65 55' stroke='%23d4a373' stroke-width='4' fill='none' stroke-linecap='round'/><circle cx='50' cy='62' r='4' fill='%23d4a373'/></svg>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-    <title>Jalchobi Cafe & Restaurant — Immersive Hospitality Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Jalchabi Cafe & Restaurant — Immersive Hospitality Experience</title>
     
     <!-- Meta tags for SEO & Discovery -->
-    <meta name="description" content="Enter Jalchobi Cafe & Restaurant — a cinematic, immersive 3D digital journey where warm walnut tones, artisanal roasts, and contemporary gastronomy converge." />
-    <meta name="keywords" content="Jalchobi, cafe, restaurant, specialty coffee, artisanal bakery, immersive 3D cafe, fine dining, brunch" />
-    <meta name="author" content="Jalchobi Hospitality Group" />
-    <meta name="theme-color" content="#1b120c" />
+    <meta name="description" content="Enter Jalchabi Cafe & Restaurant — a cinematic, immersive 3D digital journey where warm walnut tones, artisanal roasts, and contemporary gastronomy converge." />
+    <meta name="keywords" content="Jalchabi, cafe, restaurant, specialty coffee, artisanal bakery, immersive 3D cafe, fine dining, brunch" />
+    <meta name="author" content="Jalchabi Hospitality Group" />
+    <meta name="theme-color" content="#120d09" />
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="restaurant.restaurant" />
-    <meta property="og:title" content="Jalchobi Cafe & Restaurant — Immersive 3D Experience" />
+    <meta property="og:title" content="Jalchabi Cafe & Restaurant — Immersive 3D Experience" />
     <meta property="og:description" content="Explore our warm architectural sanctuary, handcrafted brew bar, and seasonal kitchen before you step through our doors." />
-    <meta property="og:site_name" content="Jalchobi Cafe & Restaurant" />
+    <meta property="og:site_name" content="Jalchabi Cafe & Restaurant" />
 
-    <!-- Fonts: Cormorant Garamond (refined luxury serif) + Plus Jakarta Sans (clean modern grotesque) -->
+    <!-- Fonts: Fraunces (bold editorial serif) + Cormorant Garamond (refined luxury serif) + Plus Jakarta Sans (clean modern grotesque) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Schema.org Restaurant Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Restaurant",
-      "name": "Jalchobi Cafe & Restaurant",
-      "description": "Artisanal specialty coffee house, patisserie, and contemporary dining sanctuary featuring seasonal local produce.",
-      "servesCuisine": ["Specialty Coffee", "Artisanal Brunch", "Contemporary Bistro", "Patisserie"],
-      "priceRange": "$$",
-      "currenciesAccepted": "USD, EUR, GBP, BDT",
-      "paymentAccepted": "Cash, Credit Card, Contactless",
+      "name": "Jalchabi Cafe & Restaurant",
+      "founder": "Sabir Hossain Khan",
+      "telephone": "+918918948730",
+      "description": "Artisanal cafe, fresh Darjeeling momos, crispy drums of heaven, and royal Dum Biryani sanctuary in Sarberia, Canning II.",
+      "servesCuisine": ["Darjeeling Momos", "Kolkata Mughlai Biryani", "Specialty Coffee", "Fast Food", "Crispy Chicken"],
+      "priceRange": "₹₹",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash, UPI (PhonePe, GPay, Paytm), Contactless",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sarberia Main Road, Near Atharobanki",
+        "addressLocality": "Canning II, South 24 Parganas",
+        "postalCode": "743329",
+        "addressRegion": "West Bengal",
+        "addressCountry": "IN"
+      },
       "openingHours": [
-        "Mo-Fr 07:30-22:00",
-        "Sa-Su 08:30-23:00"
+        "Mo-Su 10:00-22:00"
       ],
       "acceptsReservations": "True"
     }
     </script>
+
+    <!-- Phase 8: Preload mobile hero image for sub-1.5s mobile LCP -->
+    <link rel="preload" as="image" href="/images/jalchabi-exterior-dusk.jpg" media="(max-width: 767px)" />
   </head>
-  <body class="bg-[#120d09] text-[#f5efe6] selection:bg-[#c58b4b] selection:text-[#120d09] antialiased min-h-screen overflow-x-hidden">
+  <body class="bg-[#070e0c] text-[#fdfbf7] selection:bg-[#dfb86c] selection:text-[#070e0c] antialiased min-h-screen">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

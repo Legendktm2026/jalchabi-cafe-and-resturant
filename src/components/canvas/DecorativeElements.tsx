@@ -15,7 +15,7 @@ export const DecorativeElements: React.FC = () => {
         {/* Brass Rim on Pot */}
         <mesh position={[0, 0.64, 0]}>
           <cylinderGeometry args={[0.31, 0.31, 0.03, 24]} />
-          <meshStandardMaterial color="#c58b4b" metalness={0.88} roughness={0.25} />
+          <meshStandardMaterial color="#dfb86c" metalness={0.88} roughness={0.25} />
         </mesh>
         {/* Soil Surface */}
         <mesh position={[0, 0.6, 0]}>
@@ -53,7 +53,7 @@ export const DecorativeElements: React.FC = () => {
         {/* Fluted Brass Planter */}
         <mesh position={[0, 0.45, 0]} castShadow receiveShadow>
           <cylinderGeometry args={[0.35, 0.28, 0.9, 24]} />
-          <meshStandardMaterial color="#c58b4b" metalness={0.85} roughness={0.25} />
+          <meshStandardMaterial color="#dfb86c" metalness={0.85} roughness={0.25} />
         </mesh>
         {/* Slender Woody Trunk */}
         <mesh position={[0, 1.3, 0]} castShadow>
@@ -72,13 +72,13 @@ export const DecorativeElements: React.FC = () => {
       </group>
 
       {/* =========================================================================
-          HERITAGE ARTWORK WALL: "JALCHOBI — REFLECTIONS ON WATER" (Right Wall)
+          HERITAGE ARTWORK WALL: "JALCHABI — REFLECTIONS ON WATER" (Right Wall)
           ========================================================================= */}
       <group position={[5.5, 2.3, -1.4]}>
         {/* Antique Brass Slim Picture Frame */}
         <mesh rotation={[0, -Math.PI / 2, 0]}>
           <boxGeometry args={[2.2, 1.4, 0.06]} />
-          <meshStandardMaterial color="#c58b4b" metalness={0.9} roughness={0.2} />
+          <meshStandardMaterial color="#dfb86c" metalness={0.9} roughness={0.2} />
         </mesh>
         {/* Picture Matting / Canvas (Deep Indigo & Gold Watercolor representation) */}
         <mesh position={[-0.04, 0, 0]} rotation={[0, -Math.PI / 2, 0]}>
@@ -94,7 +94,7 @@ export const DecorativeElements: React.FC = () => {
         <mesh position={[-0.045, -0.1, 0.1]} rotation={[0, -Math.PI / 2, 0]}>
           <planeGeometry args={[1.4, 0.5]} />
           <meshStandardMaterial
-            color="#c58b4b"
+            color="#dfb86c"
             emissive="#dfb15b"
             emissiveIntensity={0.4}
             transparent
@@ -108,28 +108,23 @@ export const DecorativeElements: React.FC = () => {
           {/* Support bracket */}
           <mesh rotation={[0, 0, -Math.PI / 4]}>
             <cylinderGeometry args={[0.01, 0.01, 0.25, 8]} />
-            <meshStandardMaterial color="#c58b4b" metalness={0.9} roughness={0.2} />
+            <meshStandardMaterial color="#dfb86c" metalness={0.9} roughness={0.2} />
           </mesh>
           {/* Horizontal Hood */}
           <mesh position={[-0.08, 0.08, 0]} rotation={[0, 0, 0]}>
             <boxGeometry args={[0.05, 0.04, 0.8]} />
-            <meshStandardMaterial color="#c58b4b" metalness={0.9} roughness={0.2} />
+            <meshStandardMaterial color="#dfb86c" metalness={0.9} roughness={0.2} />
           </mesh>
-          {/* Warm Picture Spotlight pointing down at the artwork */}
-          <spotLight
-            position={[-0.08, 0.06, 0]}
-            target-position={[0, -0.8, 0]}
-            color="#ffe0aa"
-            intensity={2.2}
-            angle={0.65}
-            penumbra={0.7}
-            distance={3.2}
-          />
+          {/* Warm Emissive Glow Strip */}
+          <mesh position={[-0.06, 0.06, 0]}>
+            <boxGeometry args={[0.02, 0.01, 0.74]} />
+            <meshStandardMaterial color="#fff0aa" emissive="#ffe0aa" emissiveIntensity={2.0} />
+          </mesh>
         </group>
       </group>
 
       {/* =========================================================================
-          BRASS WALL SCONCES (Casting up-down light fans along side walls)
+          BRASS WALL SCONCES (Warm Emissive Glowing Fixtures)
           ========================================================================= */}
       {/* Right Wall Sconces */}
       {[-4.0, 1.0].map((zPos, idx) => (
@@ -137,12 +132,18 @@ export const DecorativeElements: React.FC = () => {
           {/* Brass Cylindrical Fixture */}
           <mesh rotation={[0, 0, 0]}>
             <cylinderGeometry args={[0.05, 0.05, 0.3, 16]} />
-            <meshStandardMaterial color="#c58b4b" metalness={0.92} roughness={0.2} />
+            <meshStandardMaterial color="#dfb86c" metalness={0.92} roughness={0.2} />
           </mesh>
-          {/* Upper Light cone */}
-          <pointLight position={[-0.1, 0.2, 0]} color="#ffbb66" intensity={1.2} distance={2.4} decay={2} />
-          {/* Lower Light cone */}
-          <pointLight position={[-0.1, -0.2, 0]} color="#ffbb66" intensity={1.2} distance={2.4} decay={2} />
+          {/* Upper Glowing Accent */}
+          <mesh position={[-0.06, 0.14, 0]}>
+            <sphereGeometry args={[0.035, 8, 8]} />
+            <meshStandardMaterial color="#fff0aa" emissive="#ffbb66" emissiveIntensity={2.5} />
+          </mesh>
+          {/* Lower Glowing Accent */}
+          <mesh position={[-0.06, -0.14, 0]}>
+            <sphereGeometry args={[0.035, 8, 8]} />
+            <meshStandardMaterial color="#fff0aa" emissive="#ffbb66" emissiveIntensity={2.5} />
+          </mesh>
         </group>
       ))}
 
@@ -151,10 +152,16 @@ export const DecorativeElements: React.FC = () => {
         <group key={`l-sconce-${idx}`} position={[-5.5, 2.2, zPos]}>
           <mesh rotation={[0, 0, 0]}>
             <cylinderGeometry args={[0.05, 0.05, 0.3, 16]} />
-            <meshStandardMaterial color="#c58b4b" metalness={0.92} roughness={0.2} />
+            <meshStandardMaterial color="#dfb86c" metalness={0.92} roughness={0.2} />
           </mesh>
-          <pointLight position={[0.1, 0.2, 0]} color="#ffbb66" intensity={1.2} distance={2.4} decay={2} />
-          <pointLight position={[0.1, -0.2, 0]} color="#ffbb66" intensity={1.2} distance={2.4} decay={2} />
+          <mesh position={[0.06, 0.14, 0]}>
+            <sphereGeometry args={[0.035, 8, 8]} />
+            <meshStandardMaterial color="#fff0aa" emissive="#ffbb66" emissiveIntensity={2.5} />
+          </mesh>
+          <mesh position={[0.06, -0.14, 0]}>
+            <sphereGeometry args={[0.035, 8, 8]} />
+            <meshStandardMaterial color="#fff0aa" emissive="#ffbb66" emissiveIntensity={2.5} />
+          </mesh>
         </group>
       ))}
     </group>

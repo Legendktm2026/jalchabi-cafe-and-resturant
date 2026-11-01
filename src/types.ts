@@ -44,12 +44,17 @@ export interface ReservationFormData {
   dietaryNotes: string;
 }
 
+export type GraphicsTier = 'high' | 'balanced' | 'low' | 'fallback';
+
 export interface QualitySettings {
+  tier?: GraphicsTier;
   pixelRatio: number;
   shadows: boolean;
   reducedMotion: boolean;
   highContrast: boolean;
   soundEnabled: boolean;
+  maxLights?: number;
+  particleDensity?: number;
 }
 
 export type ActiveModal = 

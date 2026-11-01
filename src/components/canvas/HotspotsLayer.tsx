@@ -30,8 +30,8 @@ export const HotspotsLayer: React.FC<HotspotsLayerProps> = ({
             <mesh>
               <sphereGeometry args={[0.06, 12, 12]} />
               <meshStandardMaterial
-                color="#e6be8a"
-                emissive="#c58b4b"
+                color="#e5c378"
+                emissive="#dfb86c"
                 emissiveIntensity={isHovered ? 2.2 : 1.2}
                 roughness={0.2}
               />
@@ -41,7 +41,7 @@ export const HotspotsLayer: React.FC<HotspotsLayerProps> = ({
             <mesh rotation={[-Math.PI / 2, 0, 0]}>
               <ringGeometry args={[0.08, 0.12, 24]} />
               <meshBasicMaterial
-                color="#c58b4b"
+                color="#dfb86c"
                 transparent
                 opacity={isHovered ? 0.8 : 0.45}
               />
@@ -65,24 +65,24 @@ export const HotspotsLayer: React.FC<HotspotsLayerProps> = ({
                 aria-label={`View hotspot: ${hotspot.title}`}
                 className={`group relative flex items-center gap-2 px-3 py-1.5 rounded-full transition-all duration-300 backdrop-blur-md border shadow-lg cursor-pointer ${
                   isHovered
-                    ? 'bg-[#281e17]/95 border-[#e6be8a] shadow-[0_0_20px_rgba(197,139,75,0.45)]'
-                    : 'bg-[#18120d]/80 border-[#c58b4b]/40 hover:border-[#c58b4b]'
+                    ? 'bg-[#14241f]/95 border-[#e5c378] shadow-[0_0_20px_rgba(223,184,108,0.45)]'
+                    : 'bg-[#0e1b17]/90 border-[#dfb86c]/40 hover:border-[#dfb86c]'
                 }`}
               >
                 {/* Glowing Dot indicator */}
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#c58b4b] opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#e6be8a]" />
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#dfb86c] opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#e5c378]" />
                 </span>
 
                 {/* Badge text */}
-                <span className="text-[11px] font-semibold tracking-wider uppercase text-[#f5efe6] whitespace-nowrap">
+                <span className="text-[11px] font-semibold tracking-wider uppercase text-[#fdfbf7] whitespace-nowrap">
                   {hotspot.badgeText}
                 </span>
 
                 {/* Expanded Title on Hover */}
                 {isHovered && (
-                  <span className="text-[11px] font-medium text-[#c58b4b] border-l border-[#c58b4b]/30 pl-2 whitespace-nowrap animate-fadeIn">
+                  <span className="text-[11px] font-medium text-[#dfb86c] border-l border-[#dfb86c]/30 pl-2 whitespace-nowrap animate-fadeIn">
                     {hotspot.title}
                   </span>
                 )}

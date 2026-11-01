@@ -1,0 +1,325 @@
+{
+  "url": "http://localhost:4173",
+  "timestamp": "2026-10-17T05:02:03.205Z",
+  "desktop": {
+    "consoleLogs": [],
+    "consoleErrors": [],
+    "sparkleAnalysis": [
+      {
+        "scrollPos": 0,
+        "info": {
+          "canvases": [
+            {
+              "id": "",
+              "className": "",
+              "width": 2160,
+              "height": 1350,
+              "cssWidth": 1440,
+              "cssHeight": 900,
+              "top": 73,
+              "left": 0
+            },
+            {
+              "id": "scrolly-sparkles",
+              "className": "pointer-events-none absolute inset-0 h-full w-full ",
+              "width": 1440,
+              "height": 900,
+              "cssWidth": 1440,
+              "cssHeight": 900,
+              "top": 73,
+              "left": 0
+            },
+            {
+              "id": "",
+              "className": "absolute inset-0 w-full h-full pointer-events-none mix-blend-screen",
+              "width": 300,
+              "height": 150,
+              "cssWidth": 614,
+              "cssHeight": 383.75,
+              "top": 6098.625,
+              "left": 81
+            }
+          ],
+          "yellowElements": [
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "className": "px-2.5 py-1 rounded-full text-xs font-medium transition-all cursor-pointer bg-[#c58b4b] text-[#120d0",
+              "rect": {
+                "top": 24,
+                "left": 892,
+                "width": 48,
+                "height": 24
+              },
+              "text": "বাংলা",
+              "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px",
+              "borderRadius": "3.35544e+07px"
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "className": "w-0.5 rounded-full bg-[#c58b4b] transition-all duration-300 h-1 opacity-50",
+              "rect": {
+                "top": 34,
+                "left": 1002,
+                "width": 2,
+                "height": 4
+              },
+              "text": "",
+              "boxShadow": "none",
+              "borderRadius": "3.35544e+07px"
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "className": "w-0.5 rounded-full bg-[#c58b4b] transition-all duration-300 h-1 opacity-50",
+              "rect": {
+                "top": 34,
+                "left": 1010,
+                "width": 2,
+                "height": 4
+              },
+              "text": "",
+              "boxShadow": "none",
+              "borderRadius": "3.35544e+07px"
+            },
+            {
+              "tag": "A",
+              "id": "",
+              "className": "px-5 py-2.5 rounded-full bg-[#c58b4b] hover:bg-[#e6be8a] text-[#120d09] font-medium text-xs tracking",
+              "rect": {
+                "top": 10,
+                "left": 1240,
+                "width": 88,
+                "height": 52
+              },
+              "text": "বুকিং করুন",
+              "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(197, 139, 75, 0.25) 0px 0px 20px 0px",
+              "borderRadius": "3.35544e+07px"
+            },
+            {
+              "tag": "CANVAS",
+              "id": "scrolly-sparkles",
+              "className": "pointer-events-none absolute inset-0 h-full w-full ",
+              "rect": {
+                "top": 73,
+                "left": 0,
+                "width": 1440,
+                "height": 900
+              },
+              "text": "",
+              "boxShadow": "none",
+              "borderRadius": "0px"
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "className": "w-2 h-2 rounded-full bg-[#c58b4b] animate-pulse",
+              "rect": {
+                "top": 182,
+                "left": 49,
+                "width": 8,
+                "height": 8
+              },
+              "text": "",
+              "boxShadow": "none",
+              "borderRadius": "3.35544e+07px"
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "className": "flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] md:text-xs font-mono uppercase tracki",
+              "rect": {
+                "top": 174,
+                "left": 369,
+                "width": 95,
+                "height": 24
+              },
+              "text": "5:30 PM",
+              "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
+              "borderRadius": "3.35544e+07px"
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "className": "w-0.5 rounded-full bg-[#c58b4b] transition-all duration-300 h-1 opacity-50",
+              "rect": {
+                "top": 184,
+                "left": 1281,
+                "width": 2,
+                "height": 4
+              },
+              "text": "",
+              "boxShadow": "none",
+              "borderRadius": "3.35544e+07px"
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "className": "w-0.5 rounded-full bg-[#c58b4b] transition-all duration-300 h-1 opacity-50",
+              "rect": {
+                "top": 184,
+                "left": 1289,
+                "width": 2,
+                "height": 4
+              },
+              "text": "",
+              "boxShadow": "none",
+              "borderRadius": "3.35544e+07px"
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "className": "pointer-events-auto relative w-full max-w-[390px] rounded-2xl border border-[#c58b4b]/30 bg-[#120d09",
+              "rect": {
+                "top": 478,
+                "left": 64,
+                "width": 390,
+                "height": 432
+              },
+              "text": "জলছবি নিকেতন প্রবেশদ্বার\n01 / ENTRANCE\n01 / 06\nThe",
+              "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.8) 0px 20px 50px 0px, rgba(197, 139, 75, 0.12) 0px 0px 30px 0px",
+              "borderRadius": "16px"
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "className": "absolute -top-12 -right-12 w-32 h-32 rounded-full bg-[#c58b4b]/15 blur-2xl pointer-events-none",
+              "rect": {
+                "top": 431,
+                "left": 373,
+                "width": 128,
+                "height": 128
+              },
+              "text": "",
+              "boxShadow": "none",
+              "borderRadius": "3.35544e+07px"
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "className": "inline-flex items-center gap-2 rounded-full border border-[#c58b4b]/40 bg-[#c58b4b]/10 px-3 py-1 tex",
+              "rect": {
+                "top": 511,
+                "left": 97,
+                "width": 165,
+                "height": 26
+              },
+              "text": "01 / ENTRANCE",
+              "boxShadow": "none",
+              "borderRadius": "3.35544e+07px"
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "className": "w-1.5 h-1.5 rounded-full bg-[#c58b4b] animate-ping",
+              "rect": {
+                "top": 518,
+                "left": 108,
+                "width": 11,
+                "height": 11
+              },
+              "text": "",
+              "boxShadow": "none",
+              "borderRadius": "3.35544e+07px"
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "className": "group flex-1 w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#c58b4b",
+              "rect": {
+                "top": 836,
+                "left": 97,
+                "width": 324,
+                "height": 40
+              },
+              "text": "Enter Sanctuary",
+              "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.681379 0.042018 0.0988254 / 0.2) 0px 10px 15px -3px, oklab(0.681379 0.042018 0.0988254 / 0.2) 0px 4px 6px -4px",
+              "borderRadius": "12px"
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "className": "absolute right-[21px] top-4 bottom-4 w-px bg-gradient-to-b from-transparent via-[#c58b4b]/30 to-tran",
+              "rect": {
+                "top": 348,
+                "left": 1385,
+                "width": 1,
+                "height": 209
+              },
+              "text": "",
+              "boxShadow": "none",
+              "borderRadius": "0px"
+            }
+          ]
+        }
+      }
+    ],
+    "scrollObservations": [
+      {
+        "step": 1,
+        "progress": 0.15,
+        "scrollY": 2792,
+        "activeElements": 15
+      },
+      {
+        "step": 2,
+        "progress": 0.35,
+        "scrollY": 6530,
+        "activeElements": 15
+      },
+      {
+        "step": 3,
+        "progress": 0.55,
+        "scrollY": 10262,
+        "activeElements": 14
+      },
+      {
+        "step": 4,
+        "progress": 0.75,
+        "scrollY": 13994,
+        "activeElements": 15
+      },
+      {
+        "step": 5,
+        "progress": 0.95,
+        "scrollY": 17725,
+        "activeElements": 10
+      }
+    ],
+    "features": {}
+  },
+  "mobile": {
+    "consoleLogs": [],
+    "consoleErrors": [],
+    "sparkleAnalysis": [
+      {
+        "scrollPos": 0,
+        "info": {
+          "canvases": [
+            {
+              "id": "",
+              "width": 585,
+              "height": 1266,
+              "rect": {}
+            },
+            {
+              "id": "scrolly-sparkles",
+              "width": 390,
+              "height": 844,
+              "rect": {}
+            },
+            {
+              "id": "",
+              "width": 300,
+              "height": 150,
+              "rect": {}
+            }
+          ]
+        }
+      }
+    ],
+    "scrollObservations": [],
+    "features": {}
+  }
+}

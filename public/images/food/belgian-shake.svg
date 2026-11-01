@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#241913"/>
+      <stop offset="70%" stop-color="#150f0b"/>
+      <stop offset="100%" stop-color="#0d0805"/>
+    </radialGradient>
+    <!-- Gold Trim Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="50%" stop-color="#f5d77f"/>
+      <stop offset="100%" stop-color="#c58b4b"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Heritage Border Frame -->
+  <rect x="24" y="24" width="752" height="752" rx="28" fill="none" stroke="#c58b4b" stroke-width="2" stroke-opacity="0.35"/>
+  <rect x="34" y="34" width="732" height="732" rx="22" fill="none" stroke="#d4af37" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="8,6"/>
+
+  <!-- Top Category & Bengali Badge -->
+  <g transform="translate(400, 68)" text-anchor="middle">
+    <rect x="-160" y="-22" width="320" height="40" rx="20" fill="#1e140d" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <text x="0" y="4" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#e6be8a" letter-spacing="3">BEVERAGES • JALCHABI</text>
+  </g>
+
+  <!-- Central Culinary Illustration with Drop Shadow -->
+  <g filter="url(#shadow)">
+    
+      <!-- Tall Fountain Glass -->
+      <path d="M 320 200 L 350 450 L 330 470 L 470 470 L 450 450 L 480 200 Z" fill="#1b120c" stroke="#f5efe6" stroke-width="4"/>
+      <!-- Rich Dark Belgian Chocolate Shake Layer -->
+      <polygon points="328,240 352,445 448,445 472,240" fill="#4a235a" opacity="0.2"/>
+      <polygon points="328,240 352,445 448,445 472,240" fill="#3e1f08"/>
+      <!-- Swirling Fudge Drip Lines -->
+      <path d="M 335 250 Q 360 300 355 350" stroke="#1c0d02" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <path d="M 465 260 Q 440 320 445 380" stroke="#1c0d02" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <!-- High Swirled Whipped Cream Top -->
+      <path d="M 330 210 C 330 140, 470 140, 470 210 Z" fill="#fffdf9" stroke="#eaeded" stroke-width="3"/>
+      <circle cx="400" cy="150" r="28" fill="#fffdf9"/>
+      <!-- Dark Chocolate Curl / Flakes on Top -->
+      <rect x="385" y="130" width="30" height="8" rx="4" fill="#3e1f08" transform="rotate(-20 400 135)"/>
+      <rect x="375" y="145" width="25" height="7" rx="3" fill="#3e1f08" transform="rotate(30 385 150)"/>
+      <!-- Striped Straw -->
+      <line x1="440" y1="90" x2="380" y2="400" stroke="#c0392b" stroke-width="10" stroke-linecap="round"/>
+      <line x1="440" y1="90" x2="380" y2="400" stroke="#fdfefe" stroke-width="10" stroke-linecap="round" stroke-dasharray="14,14"/>
+    
+  </g>
+
+  <!-- Bottom Dish Info Banner -->
+  <g transform="translate(400, 680)" text-anchor="middle">
+    <!-- Dish Title -->
+    <text x="0" y="0" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="600" fill="#f5efe6" letter-spacing="1">
+      Thick Belgian Chocolate Fudge Shake
+    </text>
+    <!-- Bengali Subtitle -->
+    <text x="0" y="32" font-family="'Noto Sans Bengali', system-ui, sans-serif" font-size="20" font-weight="500" fill="#e6be8a">
+      থিক বেলজিয়ান চকলেট মিল্কশেক
+    </text>
+    <!-- Provenance / Description Pills -->
+    <text x="0" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="400" fill="#c9bea9" letter-spacing="1">
+      Dark Belgian Chocolate • Whipped Cream • Cocoa Curls
+    </text>
+  </g>
+
+  <!-- Signature Badge -->
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="180" height="30" rx="15" fill="#2d1c10" stroke="#d4af37" stroke-width="1" opacity="0.9"/>
+    <text x="16" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#f5efe6">✨ Decadent Cafe Indulgence</text>
+  </g>
+
+  <!-- Ready for Enhanced Pixabay / WebP Tag -->
+  <g transform="translate(560, 80)">
+    <rect x="0" y="0" width="160" height="30" rx="15" fill="#1b261e" stroke="#27ae60" stroke-width="1" opacity="0.9"/>
+    <text x="14" y="20" font-family="system-ui, monospace" font-size="11" font-weight="600" fill="#2ecc71">● 4K ENHANCED</text>
+  </g>
+</svg>

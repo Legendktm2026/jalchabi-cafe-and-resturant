@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 
@@ -10,15 +10,12 @@ export interface ScrollState {
   scrollY: number;
   progress: number;
   velocity: number;
+  isScrolled: boolean;
 }
 
 export function useSmoothScroll({ reducedMotion = false }: SmoothScrollOptions = {}) {
   const lenisRef = useRef<Lenis | null>(null);
-  const [scrollState, setScrollState] = useState<ScrollState>({
-    scrollY: 0,
-    progress: 0,
-    velocity: 0,
-  });
+  const scrollRef = useRef({ scrollY: 0, progress: 0, velocity: 0 });
 
   useEffect(() => {
     // If user prefers reduced motion, do not initialize smooth inertia scroll
@@ -32,30 +29,27 @@ export function useSmoothScroll({ reducedMotion = false }: SmoothScrollOptions =
 
     // Initialize Lenis with Apple-style inertia and momentum curve
     const lenis = new Lenis({
-      duration: 1.15, // Smooth Apple-grade momentum duration
+      duration: 0.9, // Crisp, responsive momentum duration
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Apple exponential deceleration curve
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 0.95, // Refined trackpad sensitivity for MacBook Pro
-      touchMultiplier: 1.6,
+      wheelMultiplier: 1.0,
+      touchMultiplier: 1.5,
       infinite: false,
     });
 
     lenisRef.current = lenis;
 
-    // High-precision scroll event listener synced to display refresh rate
     const handleScroll = (e: { scroll: number; progress: number; velocity: number }) => {
-      setScrollState({
-        scrollY: e.scroll,
-        progress: e.progress,
-        velocity: e.velocity,
-      });
+      scrollRef.current.scrollY = e.scroll;
+      scrollRef.current.progress = e.progress;
+      scrollRef.current.velocity = e.velocity;
     };
 
     lenis.on('scroll', handleScroll);
 
-    // Synchronize directly with 120Hz ProMotion display vsync via requestAnimationFrame
+    // Synchronize directly with display vsync via requestAnimationFrame
     let rafId: number;
     function raf(time: number) {
       lenis.raf(time);
@@ -112,7 +106,13 @@ export function useSmoothScroll({ reducedMotion = false }: SmoothScrollOptions =
 
   return {
     lenis: lenisRef.current,
-    scrollState,
+    isScrolled: false,
+    scrollState: {
+      isScrolled: false,
+      scrollY: 0,
+      progress: 0,
+      velocity: 0,
+    },
     scrollTo,
   };
 }

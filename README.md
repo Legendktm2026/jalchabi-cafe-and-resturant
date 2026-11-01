@@ -1,7 +1,7 @@
-# Jalchobi Cafe & Restaurant — Immersive 3D Experience
+# Jalchabi Cafe & Restaurant — Immersive 3D Experience
 
 > **A place to linger.**  
-> An extraordinary, cinematic, interactive 3D WebGL digital destination set in the cultural context of **Kolkata, India**. Inspired by the Bengali heritage of *Jalchobi* (জলছবি) — watercolor reflections, liquid silhouettes, and the unhurried spirit of adda.
+> An extraordinary, cinematic, interactive 3D WebGL digital destination set in the cultural context of **Kolkata, India**. Inspired by the Bengali heritage of *Jalchabi* (জলছবি) — watercolor reflections, liquid silhouettes, and the unhurried spirit of adda.
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19.0-61dafb.svg)](https://react.dev/)
@@ -15,7 +15,7 @@
 ## 1. Project Overview & Art Direction
 
 ### Cinematic Realism
-Jalchobi is not a generic restaurant template or a flat landing page with CSS zoom effects. It is a genuine 3D architectural sanctuary rendered in real-time WebGL, capturing the golden twilight atmosphere of an intimate café at dusk:
+Jalchabi is not a generic restaurant template or a flat landing page with CSS zoom effects. It is a genuine 3D architectural sanctuary rendered in real-time WebGL, capturing the golden twilight atmosphere of an intimate café at dusk:
 
 - **Color Palette**: Deep forest green (`#0d2218`), warm dark walnut timber (`#1f140e`), antique brass & brushed gold (`#d4af37`, `#b89047`), warm amber illumination (`#ffaa44`), and cream/ivory typography (`#f5f0e8`).
 - **Atmosphere**: Dusk exterior with glowing street gas lamps, warm interior illumination spilling through tall arched paned windows onto wet stone pavement, and rich material reflections.
@@ -32,8 +32,8 @@ Built with **Three.js** and **@react-three/fiber**, the 3D scene consists of pro
 1. **Shot 1 — Establishing Shot (Exterior at Dusk)**:
    - Full 20-meter masonry facade in deep forest green with classical cornices, pilasters, and granite curb.
    - Twin 3.5m arched display windows with warm interior illumination and street gas lamps.
-   - Glass double entrance with illuminated brass canopy and typographic wordmark: `JALCHOBI CAFE & RESTAURANT`.
-   - Call to Action: **"ENTER JALCHOBI"** with immediate **"SKIP INTRO"** bypass.
+   - Glass double entrance with illuminated brass canopy and typographic wordmark: `JALCHABI CAFE & RESTAURANT`.
+   - Call to Action: **"ENTER JALCHABI"** with immediate **"SKIP INTRO"** bypass.
 2. **Shot 2 — The Approach**:
    - Smooth camera dolly toward the entrance along an eased spline trajectory.
    - Subtle parallax between street elements, lamps, and interior silhouettes.
@@ -68,11 +68,11 @@ Surrounding the 3D scene is an editorial hospitality experience:
 1. **Top Navigation (`Navbar.tsx`)**:
    - Sticky glassmorphic bar with typographic wordmark, quick jump links (`3D Experience`, `The Concept`, `Menu Preview`, `Visual Gallery`, `Visit Kolkata`, `Concierge`), audio mute toggle, 3D settings trigger, and CTA.
 2. **Hero HUD (`CinematicHeroOverlay.tsx`)**:
-   - Seamless overlay for Shot 1 with brand copy, "ENTER JALCHOBI" button, skip intro, and persistent mode/preset controls.
+   - Seamless overlay for Shot 1 with brand copy, "ENTER JALCHABI" button, skip intro, and persistent mode/preset controls.
 3. **Hotspot Detail Modals (`HotspotModal.tsx`)**:
    - Informative slide-over cards displaying zone backstory, specialty details, concept imagery, and direct links to corresponding website sections.
 4. **The Concept Story (`ConceptStorySection.tsx`)**:
-   - Editorial exploration of the Bengali word *Jalchobi*, Kolkata's coffee house heritage, and the three architectural pillars: *The Hearth & Brew Bar*, *The Living Room*, and *The Courtyard Veranda*.
+   - Editorial exploration of the Bengali word *Jalchabi*, Kolkata's coffee house heritage, and the three architectural pillars: *The Hearth & Brew Bar*, *The Living Room*, and *The Courtyard Veranda*.
 5. **Artisanal Menu Preview (`MenuSection.tsx`)**:
    - Categorized menu with instant filtering: `All`, `Coffee`, `Signatures`, `Brunch`, `Mains`, `Desserts`.
    - Clear sample data notices, dietary tags (`Vegan`, `Vegetarian`, `Gluten-Free`, `Chef Specialty`), and calorie counts.
@@ -122,7 +122,7 @@ All restaurant copy, menu items, gallery images, contact placeholders, and 3D ho
 ```typescript
 export const RESTAURANT_DATA: RestaurantConfig = {
   meta: {
-    brandName: "Jalchobi",
+    brandName: "Jalchabi",
     tagline: "A place to linger.",
     cityContext: "Kolkata, India",
     isVerified: false, // Set to true once physical premises are finalized
@@ -131,7 +131,7 @@ export const RESTAURANT_DATA: RestaurantConfig = {
     addressLine1: "Flagship Sanctuary [Location Pending Announcement]",
     city: "Kolkata",
     phoneDisplay: "+91 (033) 2400-XXXX (Configurable)",
-    email: "concierge@jalchobi-kolkata.example.com",
+    email: "concierge@jalchabi-kolkata.example.com",
     isDemoLocation: true,
   },
   menu: [ /* Add, remove, or modify sample dishes & prices */ ],
@@ -161,8 +161,8 @@ export const HOTSPOTS: Hotspot[] = [
 
 - **Procedural 3D Models**: All architectural structures (facade, windows, doors, columns, beams, parquet floors, fluted counters, espresso machine, lamps, banquettes, chairs, tables) are custom-engineered procedural 3D meshes created specifically for this project without proprietary models or paid external subscriptions.
 - **AI Concept Imagery**:
-  - `public/images/jalchobi-exterior-dusk.jpg`: High-resolution architectural concept render of the dusk facade on wet Kolkata stone pavement.
-  - `public/images/jalchobi-interior-concept.jpg`: High-resolution architectural concept render of the fluted walnut brew bar and banquettes.
+  - `public/images/jalchabi-exterior-dusk.jpg`: High-resolution architectural concept render of the dusk facade on wet Kolkata stone pavement.
+  - `public/images/jalchabi-interior-concept.jpg`: High-resolution architectural concept render of the fluted walnut brew bar and banquettes.
   - Sourced and generated for concept visualization purposes only; clearly labeled with AI Concept indicators in accordance with creative direction.
 
 ---
@@ -214,7 +214,7 @@ The project has been tested and verified across desktop and mobile viewports wit
 
 | Screenshot | Description |
 | :--- | :--- |
-| `01_establishing_exterior.png` | Shot 1: Establishing dusk facade, street gas lamp, tagline, and "ENTER JALCHOBI" CTA |
+| `01_establishing_exterior.png` | Shot 1: Establishing dusk facade, street gas lamp, tagline, and "ENTER JALCHABI" CTA |
 | `02_interior_reveal.png` | Shot 4: Interior reveal showing fluted bar counter, banquette booth, and interactive HUD |
 | `03_brew_bar_preset.png` | Guided preset view focusing on the custom brass espresso machine and brew station |
 | `04_hotspot_modal_open.png` | Interactive 3D hotspot slide-over card open with narrative details and action link |
@@ -230,4 +230,4 @@ The project has been tested and verified across desktop and mobile viewports wit
 
 ## 9. License
 
-This project is a conceptual architectural and web prototype developed for **Jalchobi Cafe & Restaurant, Kolkata**. Open source code is distributed under the MIT License.
+This project is a conceptual architectural and web prototype developed for **Jalchabi Cafe & Restaurant, Kolkata**. Open source code is distributed under the MIT License.

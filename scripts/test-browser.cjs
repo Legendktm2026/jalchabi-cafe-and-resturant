@@ -61,18 +61,18 @@ async function runBrowserVerification() {
   console.log('1. Capturing Shot 1 (Exterior Establishing Shot)...');
   await page.screenshot({ path: path.join(screenshotDir, '01_establishing_exterior.png') });
 
-  // 2. Click "ENTER JALCHOBI" button
-  console.log('2. Clicking "ENTER JALCHOBI" ...');
-  const enterBtn = await page.$('button ::-p-text(ENTER JALCHOBI)');
+  // 2. Click "ENTER JALCHABI" button
+  console.log('2. Clicking "ENTER JALCHABI" ...');
+  const enterBtn = await page.$('button ::-p-text(ENTER JALCHABI)');
   if (enterBtn) {
     await enterBtn.click();
-    console.log('Clicked ENTER JALCHOBI. Waiting for entrance transition (2.6s)...');
+    console.log('Clicked ENTER JALCHABI. Waiting for entrance transition (2.6s)...');
     await new Promise((r) => setTimeout(r, 2800));
   } else {
-    console.warn('ENTER JALCHOBI button not found via text selector, trying fallback query');
+    console.warn('ENTER JALCHABI button not found via text selector, trying fallback query');
     await page.evaluate(() => {
       const btn = Array.from(document.querySelectorAll('button')).find((b) =>
-        b.textContent?.includes('ENTER JALCHOBI')
+        b.textContent?.includes('ENTER JALCHABI')
       );
       btn?.click();
     });

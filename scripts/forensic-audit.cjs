@@ -109,7 +109,7 @@ async function runForensicAudit() {
   // Trigger entrance
   await page.evaluate(() => {
     const enterBtn = Array.from(document.querySelectorAll('button')).find((b) =>
-      b.textContent?.includes('ENTER JALCHOBI')
+      b.textContent?.includes('ENTER JALCHABI')
     );
     enterBtn?.click();
   });
