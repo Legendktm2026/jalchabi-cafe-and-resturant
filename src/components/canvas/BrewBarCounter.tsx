@@ -454,6 +454,42 @@ export const BrewBarCounter: React.FC = () => {
             <boxGeometry args={[0.05, 0.94, 1.84]} />
             <meshStandardMaterial color="#dfb86c" metalness={0.9} roughness={0.2} />
           </mesh>
+          {/* Chalk Lettering on Board */}
+          <Text
+            position={[0.025, 0.26, 0]}
+            rotation={[0, Math.PI / 2, 0]}
+            fontSize={0.075}
+            color="#dfb86c"
+            fontWeight="bold"
+            letterSpacing={0.12}
+            anchorX="center"
+            anchorY="middle"
+          >
+            ★ JALCHABI SPECIALS ★
+          </Text>
+          <Text
+            position={[0.025, 0.12, 0]}
+            rotation={[0, Math.PI / 2, 0]}
+            fontSize={0.042}
+            color="#f5f0e6"
+            letterSpacing={0.08}
+            anchorX="center"
+            anchorY="middle"
+          >
+            Darjeeling Momos • Royal Biryani • Araku Brew
+          </Text>
+          <Text
+            position={[0.025, 0.0, 0]}
+            rotation={[0, Math.PI / 2, 0]}
+            fontSize={0.048}
+            color="#e5c378"
+            fontWeight="bold"
+            letterSpacing={0.05}
+            anchorX="center"
+            anchorY="middle"
+          >
+            জলছবি তাজা রসুই • ক্যানিং ২
+          </Text>
         </group>
 
         {/* Crown Architrave Pediment above Back-Bar Shelving Unit */}

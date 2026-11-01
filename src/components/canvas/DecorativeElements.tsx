@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from '@react-three/drei';
 
 export const DecorativeElements: React.FC = () => {
   return (
@@ -72,36 +73,119 @@ export const DecorativeElements: React.FC = () => {
       </group>
 
       {/* =========================================================================
-          HERITAGE ARTWORK WALL: "JALCHABI — REFLECTIONS ON WATER" (Right Wall)
+          HERITAGE ARTWORK WALL: "JALCHABI CAFE & RESTAURANT" (Right Wall White Board)
           ========================================================================= */}
       <group position={[5.5, 2.3, -1.4]}>
-        {/* Antique Brass Slim Picture Frame */}
+        {/* Antique Brass Slim Outer Picture Frame */}
         <mesh rotation={[0, -Math.PI / 2, 0]}>
           <boxGeometry args={[2.2, 1.4, 0.06]} />
           <meshStandardMaterial color="#dfb86c" metalness={0.9} roughness={0.2} />
         </mesh>
-        {/* Picture Matting / Canvas (Deep Indigo & Gold Watercolor representation) */}
+
+        {/* Outer Picture Matting (Rich Heritage Deep Forest Border) */}
         <mesh position={[-0.04, 0, 0]} rotation={[0, -Math.PI / 2, 0]}>
           <planeGeometry args={[2.0, 1.2]} />
           <meshStandardMaterial
-            color="#1b2a3a"
-            emissive="#1e3445"
-            emissiveIntensity={0.2}
-            roughness={0.5}
+            color="#14211a"
+            roughness={0.8}
           />
         </mesh>
-        {/* Gold watercolor swirl accents on the canvas */}
-        <mesh position={[-0.045, -0.1, 0.1]} rotation={[0, -Math.PI / 2, 0]}>
-          <planeGeometry args={[1.4, 0.5]} />
+
+        {/* Gallery White Board / Canvas Centerpiece */}
+        <mesh position={[-0.045, 0, 0]} rotation={[0, -Math.PI / 2, 0]}>
+          <planeGeometry args={[1.7, 0.95]} />
+          <meshStandardMaterial
+            color="#faf7f2"
+            roughness={0.35}
+            metalness={0.02}
+          />
+        </mesh>
+
+        {/* Fine Brass Inset Border on White Board */}
+        <mesh position={[-0.048, 0, 0]} rotation={[0, -Math.PI / 2, 0]}>
+          <planeGeometry args={[1.62, 0.87]} />
           <meshStandardMaterial
             color="#dfb86c"
-            emissive="#dfb15b"
-            emissiveIntensity={0.4}
-            transparent
-            opacity={0.8}
-            roughness={0.3}
+            metalness={0.85}
+            roughness={0.25}
+            wireframe
           />
         </mesh>
+
+        {/* =======================================================================
+            BOLD CAFE NAME & ARTISANAL BRANDING ON WHITE BOARD
+            ======================================================================= */}
+        {/* Established Tagline */}
+        <Text
+          position={[-0.052, 0.24, 0]}
+          rotation={[0, -Math.PI / 2, 0]}
+          fontSize={0.042}
+          color="#a37e36"
+          letterSpacing={0.22}
+          fontWeight="bold"
+          anchorX="center"
+          anchorY="middle"
+        >
+          ✦ ESTD. 2024 • SARBERIA ✦
+        </Text>
+
+        {/* Bold Primary Cafe Name: JALCHABI */}
+        <Text
+          position={[-0.052, 0.11, 0]}
+          rotation={[0, -Math.PI / 2, 0]}
+          fontSize={0.17}
+          color="#121815"
+          fontWeight="bold"
+          letterSpacing={0.12}
+          anchorX="center"
+          anchorY="middle"
+          outlineWidth={0.005}
+          outlineColor="#070e0c"
+        >
+          JALCHABI
+        </Text>
+
+        {/* Cafe & Restaurant Subtitle */}
+        <Text
+          position={[-0.052, -0.01, 0]}
+          rotation={[0, -Math.PI / 2, 0]}
+          fontSize={0.055}
+          color="#b88a32"
+          letterSpacing={0.24}
+          fontWeight="bold"
+          anchorX="center"
+          anchorY="middle"
+        >
+          CAFE & RESTAURANT
+        </Text>
+
+        {/* Bengali Calligraphy Name */}
+        <Text
+          position={[-0.052, -0.13, 0]}
+          rotation={[0, -Math.PI / 2, 0]}
+          fontSize={0.075}
+          color="#15271e"
+          fontWeight="bold"
+          letterSpacing={0.05}
+          anchorX="center"
+          anchorY="middle"
+        >
+          জলছবি ক্যাফে ও রেস্তোরাঁ
+        </Text>
+
+        {/* Terroir & Culinary Craft Footnote */}
+        <Text
+          position={[-0.052, -0.25, 0]}
+          rotation={[0, -Math.PI / 2, 0]}
+          fontSize={0.032}
+          color="#485c53"
+          letterSpacing={0.16}
+          fontWeight="bold"
+          anchorX="center"
+          anchorY="middle"
+        >
+          ARTISANAL COFFEE • BENGAL CULINARY SANCTUARY • CANNING II
+        </Text>
 
         {/* Dedicated Brass Picture Light Mounted Above Frame */}
         <group position={[-0.2, 0.85, 0]}>
