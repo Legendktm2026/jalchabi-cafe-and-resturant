@@ -1,7 +1,95 @@
-import React from 'react';
-import { Text } from '@react-three/drei';
+import React, { useMemo } from 'react';
+import * as THREE from 'three';
 
 export const DecorativeElements: React.FC = () => {
+  // Ultra-crisp Canvas Texture for the Heritage White Board with bold Cafe Name & Bengali calligraphy
+  const whiteboardTexture = useMemo(() => {
+    if (typeof document === 'undefined') return null;
+    const canvas = document.createElement('canvas');
+    canvas.width = 1024;
+    canvas.height = 576; // Aspect ratio matches 1.7m x 0.95m plane (~1.78)
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return null;
+
+    // 1. Pristine Linen White / Ivory Board Base
+    ctx.fillStyle = '#faf8f4';
+    ctx.fillRect(0, 0, 1024, 576);
+
+    // 2. Artisanal Outer Antique Gold Border
+    ctx.lineWidth = 8;
+    ctx.strokeStyle = '#dfb86c';
+    ctx.strokeRect(18, 18, 988, 540);
+
+    // 3. Deep Heritage Forest Green Inset Border
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = '#182f24';
+    ctx.strokeRect(30, 30, 964, 516);
+
+    // Corner Ornaments
+    const corners = [
+      [30, 30], [994, 30], [30, 546], [994, 546]
+    ];
+    ctx.fillStyle = '#dfb86c';
+    corners.forEach(([cx, cy]) => {
+      ctx.fillRect(cx - 8, cy - 8, 16, 16);
+    });
+
+    ctx.textAlign = 'center';
+
+    // 4. Established Crest / Tagline
+    ctx.fillStyle = '#9c772c';
+    ctx.font = 'bold 22px "Cinzel", Georgia, serif';
+    ctx.fillText('✦ ESTD. 2024 • SARBERIA, CANNING II ✦', 512, 75);
+
+    // 5. Bold Primary Cafe Name: JALCHABI
+    ctx.fillStyle = '#0f241a';
+    ctx.font = '900 86px "Playfair Display", Georgia, "Times New Roman", serif';
+    ctx.fillText('JALCHABI', 512, 172);
+
+    // 6. Subtitle: CAFE & RESTAURANT
+    ctx.fillStyle = '#b88a32';
+    ctx.font = 'bold 34px "Cinzel", Georgia, serif';
+    ctx.fillText('CAFE & RESTAURANT', 512, 226);
+
+    // 7. Ornamental Divider Line
+    ctx.beginPath();
+    ctx.moveTo(240, 250);
+    ctx.lineTo(784, 250);
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = '#dfb86c';
+    ctx.stroke();
+
+    // Central Emblem Diamond
+    ctx.fillStyle = '#dfb86c';
+    ctx.beginPath();
+    ctx.arc(512, 250, 6, 0, Math.PI * 2);
+    ctx.fill();
+
+    // 8. Bengali Calligraphy: জলছবি ক্যাফে ও রেস্তোরাঁ
+    ctx.fillStyle = '#142c20';
+    ctx.font = 'bold 48px "Noto Sans Bengali", "Kalpurush", "Hind Siliguri", "Segoe UI", sans-serif';
+    ctx.fillText('জলছবি ক্যাফে ও রেস্তোরাঁ', 512, 330);
+
+    // 9. Terroir & Heritage Description
+    ctx.fillStyle = '#3d5248';
+    ctx.font = 'bold 22px "Segoe UI", system-ui, sans-serif';
+    ctx.fillText('ARTISANAL COFFEE • BENGAL CULINARY SANCTUARY', 512, 390);
+
+    // 10. Founder & Leadership Recognition (Sabir Hossen Khan)
+    ctx.fillStyle = '#1b3328';
+    ctx.font = 'italic bold 26px "Times New Roman", Georgia, serif';
+    ctx.fillText('Founder & CEO: Sabir Hossen Khan', 512, 452);
+
+    // 11. Subtle Bottom Location
+    ctx.fillStyle = '#8f7339';
+    ctx.font = 'bold 16px "Cinzel", monospace';
+    ctx.fillText('★ WATERSIDE SANCTUARY • SOUTH 24 PARGANAS, WEST BENGAL ★', 512, 502);
+
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.colorSpace = THREE.SRGBColorSpace;
+    texture.needsUpdate = true;
+    return texture;
+  }, []);
   return (
     <group position={[0, 0, 0]}>
       {/* =========================================================================
@@ -91,101 +179,26 @@ export const DecorativeElements: React.FC = () => {
           />
         </mesh>
 
-        {/* Gallery White Board / Canvas Centerpiece */}
+        {/* Gallery White Board / Canvas Centerpiece with crisp bold branding */}
         <mesh position={[-0.045, 0, 0]} rotation={[0, -Math.PI / 2, 0]}>
           <planeGeometry args={[1.7, 0.95]} />
-          <meshStandardMaterial
-            color="#faf7f2"
-            roughness={0.35}
-            metalness={0.02}
-          />
+          {whiteboardTexture ? (
+            <meshStandardMaterial
+              map={whiteboardTexture}
+              emissiveMap={whiteboardTexture}
+              emissive="#ffffff"
+              emissiveIntensity={0.25}
+              roughness={0.4}
+              metalness={0.02}
+            />
+          ) : (
+            <meshStandardMaterial
+              color="#faf7f2"
+              roughness={0.35}
+              metalness={0.02}
+            />
+          )}
         </mesh>
-
-        {/* Fine Brass Inset Border on White Board */}
-        <mesh position={[-0.048, 0, 0]} rotation={[0, -Math.PI / 2, 0]}>
-          <planeGeometry args={[1.62, 0.87]} />
-          <meshStandardMaterial
-            color="#dfb86c"
-            metalness={0.85}
-            roughness={0.25}
-            wireframe
-          />
-        </mesh>
-
-        {/* =======================================================================
-            BOLD CAFE NAME & ARTISANAL BRANDING ON WHITE BOARD
-            ======================================================================= */}
-        {/* Established Tagline */}
-        <Text
-          position={[-0.052, 0.24, 0]}
-          rotation={[0, -Math.PI / 2, 0]}
-          fontSize={0.042}
-          color="#a37e36"
-          letterSpacing={0.22}
-          fontWeight="bold"
-          anchorX="center"
-          anchorY="middle"
-        >
-          ✦ ESTD. 2024 • SARBERIA ✦
-        </Text>
-
-        {/* Bold Primary Cafe Name: JALCHABI */}
-        <Text
-          position={[-0.052, 0.11, 0]}
-          rotation={[0, -Math.PI / 2, 0]}
-          fontSize={0.17}
-          color="#121815"
-          fontWeight="bold"
-          letterSpacing={0.12}
-          anchorX="center"
-          anchorY="middle"
-          outlineWidth={0.005}
-          outlineColor="#070e0c"
-        >
-          JALCHABI
-        </Text>
-
-        {/* Cafe & Restaurant Subtitle */}
-        <Text
-          position={[-0.052, -0.01, 0]}
-          rotation={[0, -Math.PI / 2, 0]}
-          fontSize={0.055}
-          color="#b88a32"
-          letterSpacing={0.24}
-          fontWeight="bold"
-          anchorX="center"
-          anchorY="middle"
-        >
-          CAFE & RESTAURANT
-        </Text>
-
-        {/* Bengali Calligraphy Name */}
-        <Text
-          position={[-0.052, -0.13, 0]}
-          rotation={[0, -Math.PI / 2, 0]}
-          fontSize={0.075}
-          color="#15271e"
-          fontWeight="bold"
-          letterSpacing={0.05}
-          anchorX="center"
-          anchorY="middle"
-        >
-          জলছবি ক্যাফে ও রেস্তোরাঁ
-        </Text>
-
-        {/* Terroir & Culinary Craft Footnote */}
-        <Text
-          position={[-0.052, -0.25, 0]}
-          rotation={[0, -Math.PI / 2, 0]}
-          fontSize={0.032}
-          color="#485c53"
-          letterSpacing={0.16}
-          fontWeight="bold"
-          anchorX="center"
-          anchorY="middle"
-        >
-          ARTISANAL COFFEE • BENGAL CULINARY SANCTUARY • CANNING II
-        </Text>
 
         {/* Dedicated Brass Picture Light Mounted Above Frame */}
         <group position={[-0.2, 0.85, 0]}>

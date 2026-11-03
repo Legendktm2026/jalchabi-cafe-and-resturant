@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
+import * as THREE from 'three';
 import { useFrame } from '@react-three/fiber';
 import { Text, Html } from '@react-three/drei';
 import { soundFoley } from '../../utils/soundFoley';
@@ -8,6 +9,96 @@ import { X, ArrowUpRight } from 'lucide-react';
 export const BrewBarCounter: React.FC = () => {
   const [shelfModalOpen, setShelfModalOpen] = useState(false);
   const [isShelfVisible, setIsShelfVisible] = useState(false);
+
+  // Canvas texture for Back-Bar Chalkboard Menu Slate
+  const chalkboardTexture = useMemo(() => {
+    if (typeof document === 'undefined') return null;
+    const canvas = document.createElement('canvas');
+    canvas.width = 1024;
+    canvas.height = 512;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return null;
+
+    // Deep slate background with fine chalk grain
+    ctx.fillStyle = '#141718';
+    ctx.fillRect(0, 0, 1024, 512);
+
+    // Antique gold frame border
+    ctx.lineWidth = 6;
+    ctx.strokeStyle = '#dfb86c';
+    ctx.strokeRect(16, 16, 992, 480);
+
+    ctx.textAlign = 'center';
+
+    // Header Tagline
+    ctx.fillStyle = '#dfb86c';
+    ctx.font = 'bold 44px "Cinzel", Georgia, serif';
+    ctx.fillText('★ JALCHABI SPECIALS ★', 512, 85);
+
+    // Bengali Name
+    ctx.fillStyle = '#faf0dd';
+    ctx.font = 'bold 50px "Noto Sans Bengali", "Kalpurush", "Segoe UI", sans-serif';
+    ctx.fillText('জলছবি তাজা রসুই • ক্যানিং ২', 512, 165);
+
+    // Divider
+    ctx.beginPath();
+    ctx.moveTo(250, 195);
+    ctx.lineTo(774, 195);
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = '#dfb86c';
+    ctx.stroke();
+
+    // Menu Special Items
+    ctx.fillStyle = '#e8d2a0';
+    ctx.font = 'bold 34px "Segoe UI", sans-serif';
+    ctx.fillText('Darjeeling Momos • Royal Dum Biryani • Araku Wave', 512, 255);
+    ctx.fillText('Wood-Fired Bhetki Paturi • Daab Chingri • Mishti Doi', 512, 320);
+
+    // Direct hospitality & founder credit
+    ctx.fillStyle = '#9cb8ac';
+    ctx.font = 'italic bold 28px "Times New Roman", Georgia, serif';
+    ctx.fillText('Founder: Sabir Hossen Khan | Mobile: +91 8918948730', 512, 400);
+
+    ctx.fillStyle = '#dfb86c';
+    ctx.font = 'bold 20px "Cinzel", monospace';
+    ctx.fillText('✦ FRESHLY PREPARED WITH BENGAL TERROIR & TRADITION ✦', 512, 455);
+
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.colorSpace = THREE.SRGBColorSpace;
+    texture.needsUpdate = true;
+    return texture;
+  }, []);
+
+  // Canvas texture for Top Crown Architrave
+  const architraveTexture = useMemo(() => {
+    if (typeof document === 'undefined') return null;
+    const canvas = document.createElement('canvas');
+    canvas.width = 1024;
+    canvas.height = 128;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return null;
+
+    ctx.fillStyle = '#16100b';
+    ctx.fillRect(0, 0, 1024, 128);
+
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = '#dfb86c';
+    ctx.strokeRect(8, 8, 1008, 112);
+
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#dfb86c';
+    ctx.font = '900 52px "Playfair Display", Georgia, serif';
+    ctx.fillText('JALCHABI CAFE & RESTAURANT', 512, 62);
+
+    ctx.fillStyle = '#fdfbf7';
+    ctx.font = 'bold 26px "Noto Sans Bengali", "Segoe UI", sans-serif';
+    ctx.fillText('জলছবি ক্যাফে ও রেস্তোরাঁ • SARBERIA, CANNING II', 512, 104);
+
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.colorSpace = THREE.SRGBColorSpace;
+    texture.needsUpdate = true;
+    return texture;
+  }, []);
 
   useFrame(() => {
     const inside = scrollyStore.progress >= 0.08 && scrollyStore.progress <= 0.50;
@@ -454,42 +545,21 @@ export const BrewBarCounter: React.FC = () => {
             <boxGeometry args={[0.05, 0.94, 1.84]} />
             <meshStandardMaterial color="#dfb86c" metalness={0.9} roughness={0.2} />
           </mesh>
-          {/* Chalk Lettering on Board */}
-          <Text
-            position={[0.025, 0.26, 0]}
-            rotation={[0, Math.PI / 2, 0]}
-            fontSize={0.075}
-            color="#dfb86c"
-            fontWeight="bold"
-            letterSpacing={0.12}
-            anchorX="center"
-            anchorY="middle"
-          >
-            ★ JALCHABI SPECIALS ★
-          </Text>
-          <Text
-            position={[0.025, 0.12, 0]}
-            rotation={[0, Math.PI / 2, 0]}
-            fontSize={0.042}
-            color="#f5f0e6"
-            letterSpacing={0.08}
-            anchorX="center"
-            anchorY="middle"
-          >
-            Darjeeling Momos • Royal Biryani • Araku Brew
-          </Text>
-          <Text
-            position={[0.025, 0.0, 0]}
-            rotation={[0, Math.PI / 2, 0]}
-            fontSize={0.048}
-            color="#e5c378"
-            fontWeight="bold"
-            letterSpacing={0.05}
-            anchorX="center"
-            anchorY="middle"
-          >
-            জলছবি তাজা রসুই • ক্যানিং ২
-          </Text>
+          {/* Front illuminated face with canvas texture */}
+          <mesh position={[0.026, 0, 0]} rotation={[0, Math.PI / 2, 0]}>
+            <planeGeometry args={[1.76, 0.86]} />
+            {chalkboardTexture ? (
+              <meshStandardMaterial
+                map={chalkboardTexture}
+                emissiveMap={chalkboardTexture}
+                emissive="#ffffff"
+                emissiveIntensity={0.35}
+                roughness={0.65}
+              />
+            ) : (
+              <meshStandardMaterial color="#141718" roughness={0.9} />
+            )}
+          </mesh>
         </group>
 
         {/* Crown Architrave Pediment above Back-Bar Shelving Unit */}
@@ -503,33 +573,21 @@ export const BrewBarCounter: React.FC = () => {
             <boxGeometry args={[0.006, 0.29, 2.64]} />
             <meshStandardMaterial color="#dfb86c" metalness={0.95} roughness={0.15} />
           </mesh>
-          {/* Bold Cafe Name on Top Architrave */}
-          <Text
-            position={[0.05, 0.04, 0]}
-            rotation={[0, Math.PI / 2, 0]}
-            fontSize={0.13}
-            color="#dfb86c"
-            anchorX="center"
-            anchorY="middle"
-            outlineWidth={0.008}
-            outlineColor="#0d0905"
-            fontWeight="bold"
-            letterSpacing={0.06}
-          >
-            JALCHABI CAFE & RESTAURANT
-          </Text>
-          <Text
-            position={[0.05, -0.06, 0]}
-            rotation={[0, Math.PI / 2, 0]}
-            fontSize={0.045}
-            color="#fdfbf7"
-            anchorX="center"
-            anchorY="middle"
-            letterSpacing={0.16}
-            fontWeight="bold"
-          >
-            জলছবি ক্যাফে ও রেস্তোরাঁ • CANNING II, KOLKATA
-          </Text>
+          {/* Front illuminated face with architrave texture */}
+          <mesh position={[0.046, 0, 0]} rotation={[0, Math.PI / 2, 0]}>
+            <planeGeometry args={[2.58, 0.26]} />
+            {architraveTexture ? (
+              <meshStandardMaterial
+                map={architraveTexture}
+                emissiveMap={architraveTexture}
+                emissive="#ffffff"
+                emissiveIntensity={0.4}
+                roughness={0.4}
+              />
+            ) : (
+              <meshStandardMaterial color="#18110b" roughness={0.7} />
+            )}
+          </mesh>
         </group>
       </group>
 
