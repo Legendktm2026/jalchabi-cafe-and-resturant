@@ -34,10 +34,16 @@ export const Footer: React.FC<FooterProps> = React.memo(({ onOpenAccessibility }
             </p>
 
             <div className="pt-2 space-y-1.5">
-              <div className="flex items-start gap-2 text-xs text-[#e5c378]">
-                <MapPin className="w-4 h-4 text-[#dfb86c] shrink-0 mt-0.5" />
-                <span>{RESTAURANT_DATA.meta.exactLocation}</span>
-              </div>
+              <a
+                href={RESTAURANT_DATA.contact.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View Jalchabi Cafe & Restaurant on Google Maps"
+                className="flex items-start gap-2 text-xs text-[#e5c378] hover:text-[#fdfbf7] group transition-colors"
+              >
+                <MapPin className="w-4 h-4 text-[#dfb86c] shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                <span className="group-hover:underline">{RESTAURANT_DATA.meta.exactLocation}</span>
+              </a>
               <div className="flex items-center gap-2 text-xs text-[#8fa69d]">
                 <Phone className="w-4 h-4 text-[#dfb86c] shrink-0" />
                 <a href="tel:+918918948730" className="hover:text-[#e5c378]">
@@ -169,8 +175,13 @@ export const Footer: React.FC<FooterProps> = React.memo(({ onOpenAccessibility }
           <div className="text-center md:text-right text-[11px] text-[#8fa69d]">
             <span className="block font-mono text-[#e5c378]">PIN: 743329</span>
             <span className="block">{language === 'bn' ? 'সারবেড়িয়া, ক্যানিং ২' : 'Sarberia, Canning II'}</span>
-            <a href="tel:+918918948730" className="text-[#dfb86c] font-mono hover:underline block mt-0.5">
-              +91 8918948730
+            <a
+              href={RESTAURANT_DATA.contact.googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#dfb86c] hover:text-[#fdfbf7] underline block mt-0.5 font-medium"
+            >
+              📍 {language === 'bn' ? 'গুগল ম্যাপে লোকেশন দেখুন' : 'View on Google Maps'}
             </a>
           </div>
         </div>

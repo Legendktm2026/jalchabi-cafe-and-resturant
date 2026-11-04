@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MenuItem } from '../../config/restaurantData';
+import { MenuItem, RESTAURANT_DATA } from '../../config/restaurantData';
 import { useLanguage } from '../../context/LanguageContext';
 import { useCart } from '../../context/CartContext';
 import { X, Sparkles, Utensils, Clock, MapPin } from 'lucide-react';
@@ -152,17 +152,23 @@ export const MenuItemDetailModal: React.FC<MenuItemDetailModalProps> = ({ item, 
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-[#14241f]/70 border border-[#dfb86c]/15 flex items-start gap-3">
-                  <MapPin className="w-4 h-4 text-[#dfb86c] shrink-0 mt-0.5" />
+                <a
+                  href={RESTAURANT_DATA.contact.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="View on Google Maps"
+                  className="p-3.5 rounded-xl bg-[#14241f]/70 border border-[#dfb86c]/25 hover:border-[#dfb86c] transition-all flex items-start gap-3 group"
+                >
+                  <MapPin className="w-4 h-4 text-[#dfb86c] shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                   <div>
-                    <span className="text-xs font-semibold text-[#fdfbf7] block">
-                      {language === 'bn' ? 'ক্যাফের ঠিকানা' : 'Sanctuary Location'}
+                    <span className="text-xs font-semibold text-[#fdfbf7] group-hover:text-[#dfb86c] transition-colors block">
+                      {language === 'bn' ? 'ক্যাফের ঠিকানা (গুগল ম্যাপ)' : 'Sanctuary Location (Google Map)'}
                     </span>
                     <span className="text-xs text-[#8fa69d]">
-                      Sarberia, Atharobanki, Canning II - 743329
+                      Sarberia, Atharobanki, Canning II - 743329 ↗
                     </span>
                   </div>
-                </div>
+                </a>
               </div>
 
               {/* CTA Action */}

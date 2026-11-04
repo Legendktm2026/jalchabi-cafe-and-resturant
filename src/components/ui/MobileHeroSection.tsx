@@ -65,12 +65,18 @@ export const MobileHeroSection: React.FC<MobileHeroSectionProps> = ({
       >
         {/* Top row: Live location badge & 3D Art Edition escape hatch */}
         <div className="flex items-center justify-between mb-3 w-full">
-          <div className="flex items-center gap-2">
+          <a
+            href="https://share.google/YxnV3K2qeoJCWx2Ua"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Open Jalchabi on Google Maps"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
+          >
             <span className="w-2 h-2 rounded-full bg-[#dfb86c] animate-pulse shrink-0" />
             <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#e6ece9]">
-              {language === 'bn' ? 'সারবেড়িয়া, ক্যানিং ২' : 'Sarberia, Canning II'}
+              {language === 'bn' ? 'সারবেড়িয়া, ক্যানিং ২ ↗' : 'Sarberia, Canning II ↗'}
             </span>
-          </div>
+          </a>
 
           <button
             type="button"

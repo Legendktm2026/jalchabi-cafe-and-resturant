@@ -121,10 +121,18 @@ export const ReservationSection: React.FC<ReservationSectionProps> = React.memo(
               {t.reservation.subtitle}
             </p>
 
-            {/* Location Notice */}
-            <div className="mt-6 p-3 rounded-xl bg-[#14241f]/85 border border-[#dfb86c]/30 text-xs text-[#e5c378] flex items-center justify-center gap-2">
+            {/* Location Notice with Google Map Point */}
+            <div className="mt-6 p-3 rounded-xl bg-[#14241f]/85 border border-[#dfb86c]/30 text-xs text-[#e5c378] flex flex-wrap items-center justify-center gap-2">
               <AlertCircle className="w-4 h-4 text-[#dfb86c] shrink-0" />
               <span>{RESTAURANT_DATA.contact.notice}</span>
+              <a
+                href={RESTAURANT_DATA.contact.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-[#fdfbf7] font-semibold text-[#dfb86c] ml-1"
+              >
+                📍 {language === 'bn' ? 'গুগল ম্যাপে দেখুন' : 'View Google Map'}
+              </a>
             </div>
           </AppleScrollReveal>
 

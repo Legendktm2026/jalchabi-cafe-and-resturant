@@ -102,19 +102,20 @@ export const MobileQuickActionDock: React.FC<MobileQuickActionDockProps> = ({
           </span>
         </button>
 
-        {/* ── Directions / Route ───────────────────────────────────────── */}
+        {/* ── Directions / Route to Verified Google Map Point ────────── */}
         <a
-          href="https://maps.google.com/?q=Sarberia,+Canning+II,+West+Bengal+743329"
+          href="https://share.google/YxnV3K2qeoJCWx2Ua"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => soundFoley.playSwitchClick()}
+          title="Open Jalchabi Cafe & Restaurant on Google Maps"
           className="flex flex-col items-center gap-1 py-1 px-2.5 rounded-xl hover:bg-[#dfb86c]/15 text-[#8fa69d] active:scale-95 transition-all text-center min-w-[56px]"
         >
           <div className="p-1.5 rounded-full bg-[#38bdf8]/20 text-[#38bdf8] border border-[#38bdf8]/30">
             <MapPin className="w-4 h-4" />
           </div>
           <span className="text-[10px] font-medium tracking-tight">
-            {language === 'bn' ? 'ম্যাপ' : 'Directions'}
+            {language === 'bn' ? 'গুগল ম্যাপ' : 'Map Pin'}
           </span>
         </a>
 

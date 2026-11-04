@@ -129,9 +129,15 @@ export const FounderStoryModal: React.FC<FounderStoryModalProps> = ({ onClose })
               <span className="text-xs uppercase tracking-wider text-[#dfb86c] font-mono block">
                 {language === 'bn' ? 'ক্যাফের ভৌগোলিক অবস্থান' : 'Geographic Anchor'}
               </span>
-              <span className="text-xs sm:text-sm text-[#fdfbf7] font-serif">
-                {RESTAURANT_DATA.meta.exactLocation}
-              </span>
+              <a
+                href={RESTAURANT_DATA.contact.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Open Jalchabi on Google Maps"
+                className="text-xs sm:text-sm text-[#fdfbf7] hover:text-[#e5c378] font-serif underline decoration-[#dfb86c]/50 transition-colors inline-flex items-center gap-1.5 mt-0.5"
+              >
+                📍 {RESTAURANT_DATA.meta.exactLocation}
+              </a>
             </div>
           </div>
 

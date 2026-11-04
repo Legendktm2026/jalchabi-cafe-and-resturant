@@ -128,16 +128,24 @@ export const FounderStorySection: React.FC = React.memo(() => {
                   <span className="text-xs uppercase tracking-wider text-[#dfb86c] font-mono block">
                     {language === 'bn' ? 'ক্যাফের ভৌগোলিক অবস্থান' : 'Geographic Anchor'}
                   </span>
-                  <span className="text-xs sm:text-sm text-[#fdfbf7] font-serif">
-                    {RESTAURANT_DATA.meta.exactLocation}
-                  </span>
+                  <a
+                    href={RESTAURANT_DATA.contact.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Open Jalchabi on Google Maps"
+                    className="text-xs sm:text-sm text-[#fdfbf7] hover:text-[#e5c378] font-serif underline decoration-[#dfb86c]/50 transition-colors"
+                  >
+                    📍 {RESTAURANT_DATA.meta.exactLocation}
+                  </a>
                 </div>
 
                 <a
-                  href="#visit"
+                  href={RESTAURANT_DATA.contact.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#e5c378] hover:text-[#fdfbf7] transition-colors font-semibold"
                 >
-                  <span>{language === 'bn' ? 'রুট ম্যাপ দেখুন' : 'Get Directions'}</span>
+                  <span>{language === 'bn' ? 'গুগল ম্যাপে দেখুন' : 'Google Map Point'}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>

@@ -101,6 +101,9 @@ export interface RestaurantConfig {
     phoneNumber: string;
     phoneHref: string;
     whatsappHref: string;
+    googleMapsUrl: string;
+    googleMapsEmbedUrl: string;
+    googleMapsDirectionsUrl: string;
     upiVpa: string;
     upiPayeeName: string;
     email: string;
@@ -162,6 +165,9 @@ export const RESTAURANT_DATA: RestaurantConfig = {
     phoneNumber: "8918948730",
     phoneHref: "tel:+918918948730",
     whatsappHref: "https://wa.me/918918948730",
+    googleMapsUrl: "https://share.google/YxnV3K2qeoJCWx2Ua",
+    googleMapsEmbedUrl: "https://maps.google.com/maps?q=JALCHABI+CAFE+%26+RESTURANT,+Sarberia,+Canning+II&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    googleMapsDirectionsUrl: "https://www.google.com/maps/dir/?api=1&destination=JALCHABI+CAFE+%26+RESTURANT,+Sarberia,+Canning+II,+West+Bengal+743329",
     upiVpa: "8918948730@upi",
     upiPayeeName: "Sabir Hossen Khan (Jalchabi Cafe)",
     email: "contact@jalchabi.com",
